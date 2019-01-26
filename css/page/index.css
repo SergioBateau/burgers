@@ -1,4 +1,4 @@
-.welcome {
+.hero {
   width: 100%;
   min-height: 100vh;
   background: url("../../img/background/first-background.jpg") no-repeat center center;
@@ -15,7 +15,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .welcome .header {
+  .hero .header {
     width: 943px;
     min-height: 69px;
     display: -webkit-box;
@@ -32,7 +32,7 @@
     -ms-flex-align: center;
     align-items: center;
     text-transform: uppercase; }
-    .welcome .header .logo {
+    .hero .header .logo {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -40,14 +40,14 @@
       -ms-flex-align: center;
       align-items: center;
       width: 92px; }
-      .welcome .header .logo .logo__image {
+      .hero .header .logo .logo__image {
         width: 100%;
         min-height: 69px;
         background-image: url(../../img/logo/logo.png); }
-    .welcome .header .menu {
+    .hero .header .menu {
       font-size: 13px;
       width: 670px; }
-      .welcome .header .menu .menu__list {
+      .hero .header .menu .menu__list {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -59,12 +59,12 @@
         justify-content: space-around;
         color: #fff;
         list-style: disc; }
-        .welcome .header .menu .menu__list .menu__item:first-child {
+        .hero .header .menu .menu__list .menu__item:first-child {
           list-style: none; }
-        .welcome .header .menu .menu__list .menu__item__link {
+        .hero .header .menu .menu__list .menu__item__link {
           color: #fff;
           text-decoration: none; }
-    .welcome .header .btn {
+    .hero .header .btn {
       width: auto;
       height: auto;
       padding: 10px 20px;
@@ -74,7 +74,7 @@
       font-size: 13px;
       color: #fff;
       cursor: pointer; }
-  .welcome .content {
+  .hero .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -90,9 +90,9 @@
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 200px; }
-    .welcome .content .burger {
+    .hero .content .burger {
       margin-right: 30px; }
-    .welcome .content .slogan {
+    .hero .content .slogan {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -103,9 +103,9 @@
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-      .welcome .content .slogan .slogan__title {
+      .hero .content .slogan .slogan__title {
         color: #f9b43b; }
-      .welcome .content .slogan .slogan__text {
+      .hero .content .slogan .slogan__text {
         font-size: 68px;
         color: #fff;
         line-height: 1.15; }

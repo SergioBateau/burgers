@@ -1,7 +1,7 @@
 $white: #fff;
 $font-size: 13px;
 
-.welcome {
+.hero {
 width: 100%;
 min-height: 100vh;
 background: url('../../img/background/first-background.jpg') no-repeat center center;
@@ -88,5 +88,8 @@ align-items: center;
             line-height: 1.15;
             }
         }
+    }
+    .sidebar {
+
     }
 }
