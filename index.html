@@ -4,55 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Burgers</title>
 </head>
 <body>
     <div class="wrapper">
-        <section class="section welcome">
-            <div class="header">
-                <div class="logo">
-                    <a href="#" class="logo__image"></a>
+        <div class="maincontent">
+            <section class="section hero">
+                <div class="container hero__container">
+                    <header class="header">
+                        <div class="logo">
+                            <img src="./img/logo/logo.png" alt="лого">
+                        </div>
+                        <div class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__item__link">О нас</a>
+                                </li>
+                                <li class="menu__item">
+                                        <a href="#" class="menu__item__link">Бургеры</a>
+                                </li>
+                                <li class="menu__item">
+                                        <a href="#" class="menu__item__link">Команда</a>
+                                </li>
+                                <li class="menu__item">
+                                        <a href="#" class="menu__item__link">Меню</a>
+                                </li>
+                                <li class="menu__item">
+                                        <a href="#" class="menu__item__link">Отзывы</a>
+                                </li>
+                                <li class="menu__item">
+                                        <a href="#" class="menu__item__link">Как мы работаем</a>
+                                </li>
+                                <li class="menu__item">
+                                        <a href="#" class="menu__item__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn hero__order-btn">Заказать</button>
+                    </header>
+                    <div class="hero__content">
+                        <div class="hero__burger">
+                            <img src="./img/burgers/burgers-welcome.png" class="hero__burger-img" alt="Бургер">
+                        </div>
+                        <div class="hero__slogan">
+                            <h1 class="title">МЫ ДЕЛАЕМ</h1>
+                            <div class="hero__slogan-text">натуральные бургеры</div>
+                        </div>
+                    </div>
+                    <div class="hero__sidebar">
+                        <a href="#" class="sidebar__link">
+                            <img src="./img/first_section/arrow-scroll.png" alt="Скролл">
+                        </a>
+                    </div>
                 </div>
-                <div class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="another.html" class="menu__item__link">О нас</a>
-                        </li>
-                        <li class="menu__item">
-                                <a href="#" class="menu__item__link">Бургеры</a>
-                        </li>
-                        <li class="menu__item">
-                                <a href="#" class="menu__item__link">Команда</a>
-                        </li>
-                        <li class="menu__item">
-                                <a href="#" class="menu__item__link">Меню</a>
-                        </li>
-                        <li class="menu__item">
-                                <a href="#" class="menu__item__link">Отзывы</a>
-                        </li>
-                        <li class="menu__item">
-                                <a href="#" class="menu__item__link">Как мы работаем</a>
-                        </li>
-                        <li class="menu__item">
-                                <a href="#" class="menu__item__link">Контакты</a>
+            </section>
+            <section class="section section_centered best">
+                <div class="container">
+                    <h1 class="title">Мы лучшие</h1>
+                    <ul class="best__list">
+                        <li class="best__item">
+                            <div class="best__img">
+                                <img src="./img/icons/meat.svg" class="best__icon" alt="Мясо">
+                            </div>
+                            <div class="best__desc">
+                                <div class="best__desc-title">100% свежее мясо</div>
+                                <div class="best__desc-content">
+                                    <p>
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                                    </p>
+                                </div>
+                            </div>
+                        <li class="best__item">
+                            <div class="best__img">
+                                <img src="./img/icons/hand.svg" class="best__icon" alt="Рука">
+                            </div>
+                            <div class="best__desc">
+                                <div class="best__desc-title">Ручная сборка</div>
+                                <div class="best__desc-content">
+                                    <p>
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                    </p>
+                                </div>
+                            </div>
+                        <li class="best__item">
+                            <div class="best__img">
+                                <img src="./img/icons/natural.svg" class="best__icon" alt="Зелень">
+                            </div>
+                            <div class="best__desc">
+                                <div class="best__desc-title">Натуральные ингридиенты</div>
+                                <div class="best__desc-content">
+                                    <p>
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <button class="btn">ЗАКАЗАТЬ</button>
-            </div>
-            <div class="content">
-                <div class="burger">
-                    <img src="./img/burgers/burgers-welcome.png" class="burger__pic" alt="Бургер">">
-                </div>
-                <div class="slogan">
-                    <h1 class="slogan__title">МЫ ДЕЛАЕМ</h1>
-                    <p class="slogan__text">натуральные бургеры</p>
-                </div>
-            </div>
-            <div class="sidebar"></div>
-        </section>
+            </section>
+        </div>
     </div>
 </body>
 </html>
