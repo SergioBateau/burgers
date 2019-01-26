@@ -1,0 +1,92 @@
+$white: #fff;
+$font-size: 13px;
+
+.welcome {
+width: 100%;
+min-height: 100vh;
+background: url('../../img/background/first-background.jpg') no-repeat center center;
+background-size: cover;
+display: flex;
+flex-flow: column nowrap;
+justify-content: space-around;
+align-items: center;
+    .header {
+        width: 943px;
+        min-height: 69px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        .logo {
+            display: flex;
+            align-items: center;
+            width: 92px;
+            // min-height: 69px;
+            .logo__image {
+                width: 100%;
+                min-height: 69px;
+                background-image: url(../../img/logo/logo.png);
+            }
+        }
+        .menu {
+            font-size: $font-size;
+            width: 670px;
+            .menu__list{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                color: $white;
+                list-style: disc;
+            
+            .menu__item:first-child {
+                list-style: none;
+            }
+            .menu__item__link {
+                color: $white; 
+                text-decoration: none;
+            }
+            }
+        }
+        .btn {
+            width: auto;
+            height: auto;
+            padding: 10px 20px;
+            background-color: #e45028;
+            border: 1px solid #e45028;
+            border-radius: 10px;
+            font-size: $font-size;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    .content {
+        display: flex;
+        width: 865px;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 200px;
+        .burger {
+            // flex: 1;
+           margin-right: 30px;
+        //    margin-bottom: 200px;
+        }
+        .slogan {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            
+            .slogan__title {
+           
+            color: #f9b43b;
+            
+            }
+            .slogan__text {
+            font-size: 68px;
+            color: $white;
+            line-height: 1.15;
+            }
+        }
+    }
+}
