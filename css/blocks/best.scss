@@ -1,5 +1,6 @@
 .best {
-    background: url(./../img/background/second-background.jpg) center center / cover no-repeat;
+    background: url(./../img/background/second-background.jpg) center center no-repeat;
+    background-size: cover;
 }
 .best__list {
     display: flex;
@@ -23,4 +24,5 @@
 .best__desc-text {
     font-family: 'Ubuntu-light';
     font-size: 14px;
+    color: #2f3234;
 }
