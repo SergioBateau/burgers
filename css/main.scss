@@ -3,12 +3,10 @@ $orange: #e45028;
 $red: #e35028;
 $black: #2f3234;
 $yellow: #f9b43b;
-
 // layout
 @import "layout/fonts.css";
 @import "layout/base.scss";
 @import "layout/normalize.css";
-
 // blocks
 @import "./blocks/header.scss";
 @import "./blocks/hero.scss";
