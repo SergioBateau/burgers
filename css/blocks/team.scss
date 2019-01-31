@@ -1,0 +1,62 @@
+.team {
+    background: url(./../../img/background/team-background.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.team__block {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background-color: #2f3133;
+    filter: opacity(93%);
+    
+}
+.team__desc {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 100px auto; 
+}
+.team__desc-name {
+    font-family: 'Gagalin';
+    font-size: 14px;
+    color: $white;
+}
+.team__desc-profile {
+    margin-top: 20px;
+    display: flex;
+    width: 400px;
+    // min-height: 100px;
+}
+.team__profile-photo {
+    // width: 33%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.team__photo-pic {
+    width: auto;
+    height: 100%;
+    margin: 0 -20px;
+}
+.team__profile-data {
+    width: 67%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 20px;
+}
+.team__profile-post {
+    font-family: 'Ubuntu-b';
+    font-size: 14px;
+    color: $white;
+    margin-bottom: 20px;
+}
+.team__profile-duty {
+    font-family: 'Ubuntu-light';
+    font-size: 14px;
+    color: $white;
+}
