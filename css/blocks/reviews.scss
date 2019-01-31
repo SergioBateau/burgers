@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex-wrap: nowrap;
 }
 .reviews__title {
     font-family: 'Gagalin';
@@ -50,5 +51,6 @@
 .reviews__text {
     font-family: 'Ubuntu-light';
     font-size: 14px;
+    overflow: hidden;
    
 }
