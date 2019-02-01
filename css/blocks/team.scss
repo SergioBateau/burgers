@@ -19,16 +19,45 @@
     width: 75%;
     margin: 100px auto; 
 }
+.team__desc-list {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.team__desc-item {
+    margin-bottom: 45px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__active {
+        .team__desc-profile {
+            margin-top: 20px;
+            display: flex;
+            width: 400px;
+            height: auto;
+            overflow: auto;
+        }
+        .team__desc-name {
+            color: #f0ae3b;
+            &:before {
+                @include triangle_down;
+            }
+        }
+    }
+}
 .team__desc-name {
     font-family: 'Gagalin';
     font-size: 14px;
     color: $white;
+    &:before {
+        @include triangle_up;
+    }
 }
 .team__desc-profile {
     margin-top: 20px;
     display: flex;
     width: 400px;
-    // min-height: 100px;
+    height: 0;
+    overflow: hidden;
 }
 .team__profile-photo {
     // width: 33%;

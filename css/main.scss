@@ -1,8 +1,29 @@
-$white: #fff;
+$white: #ffffff;
 $orange: #e45028;
 $red: #e35028;
 $black: #2f3234;
 $yellow: #f9b43b;
+@mixin triangle_up{
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 9px solid #f9b43b;
+    margin-right: 10px;
+}
+@mixin triangle_down{
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid #f9b43b;
+    margin-right: 10px;
+}
+
 // layout
 @import "layout/fonts.css";
 @import "layout/base.scss";
@@ -16,3 +37,5 @@ $yellow: #f9b43b;
 @import "./blocks/reviews.scss";
 @import "./blocks/fixed-menu.scss";
 @import "./blocks/team.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
