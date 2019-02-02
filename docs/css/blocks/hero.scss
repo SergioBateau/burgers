@@ -1,0 +1,43 @@
+.hero {
+    background: url('./../img/background/first-background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hero__order-btn {
+    margin-left: 15px;
+}
+
+.hero__content {
+    display: flex;
+    flex: 0.75;
+
+    justify-content: center;
+    align-items: center;
+
+
+    .hero__slogan {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin-left: 15px;
+
+        .hero__slogan-text {
+            font-family: 'Livehack';
+            font-size: 55px;
+            color: $white;
+            line-height: 1.15;
+        }
+    }
+}
+
+.hero__arrow-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+}
