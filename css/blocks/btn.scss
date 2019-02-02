@@ -3,7 +3,7 @@
     background: $orange;
     border: 1px solid $orange;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 14px;
     color: $white;
     cursor: pointer;
     text-transform: uppercase;
@@ -12,4 +12,14 @@
     &_backgroind_black {
         background: #000;
     }
+}
+.reset__order-btn {
+    margin-left: 20px;
+    font-family: 'Ubuntu-light';
+    font-size: 14px;
+    color: $white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .0);
+    border: none;
+    outline: 1px solid rgba(0, 0, 0, .0);
 }

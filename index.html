@@ -323,8 +323,85 @@
                 </ul>
 
             </section>
-            <section class="section map">
+            <section class="section section_centered order">
+                <div class="container">
+                    <h1 class="title">Закажите доставку</h1>
+                    <form action="" class="form">
+                        <div class="form__left-col">
+                            <div class="form__row">
+                                <label for="name" class="form__block">
+                                    <div class="form__block-title">Имя</div>
+                                    <input type="text" id="name" class="form__block-input">
+                                </label>
+                                <label for="phone_number" class="form__block">
+                                    <div class="form__block-title">Телефон</div>
+                                    <input type="tel" id="phone_number" class="form__block-input" placeholder="89212264923">
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label for="street" class="form__block">
+                                    <div class="form__block-title">Улица</div>
+                                    <input type="text" id="street" class="form__block-input">
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label for="house" class="form__block">
+                                    <div class="form__block-title">Дом</div>
+                                    <input type="text" id="house" class="form__block-input">
+                                </label>
+                                <label for="korp" class="form__block">
+                                    <div class="form__block-title">Корпус</div>
+                                    <input type="text" id="korp" class="form__block-input">
+                                </label>
+                                <label for="kvart" class="form__block">
+                                    <div class="form__block-title">Квартира</div>
+                                    <input type="text" id="kvart" class="form__block-input">
+                                </label>
+                                <label for="floor" class="form__block">
+                                    <div class="form__block-title">Этаж</div>
+                                    <input type="text" id="floor" class="form__block-input">
+                                </label>
+                            </div>
+                        </div>
 
+                        <div class="form__right-col">
+                            <div class="form__row">
+                                <label for="comment" class="form__block">
+                                    <div class="form__block-title">Комментарий</div>
+                                    <textarea type="text" id="comment" class="form__block-textarea"></textarea>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__payment">
+                                    <input type="radio" id="cash" name="payment" class="form__radio">
+                                    <label for="cash" class="form__block-title form__payment-radio">
+                                        Потребуется сдача
+                                    </label>
+                                </div>
+                                <div class="form__payment">
+                                    <input type="radio" id="card" name="payment" class="form__radio">
+                                    <label for="card" class="form__block-title form__payment-radio">
+                                        Оплата по карте
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <label for="call" class="form__block">
+                                    <input type="checkbox" id="call" class="form__block-checkbox" checked>
+                                    <span class="form__block-checkbox-mark"></span>
+                                    <span class="form__block-title ">Не перезванивать</span>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <button type="button" class="btn form__order-btn">Заказать</button>
+                                <button type="reset" class="reset__order-btn">Очистить</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section map">
                 <footer class="footer">
                     <div class="container footer__container">
                         <div class="footer__left-col">

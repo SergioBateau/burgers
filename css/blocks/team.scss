@@ -28,7 +28,8 @@
     &:last-child {
         margin-bottom: 0;
     }
-    &__active {
+}
+.team__desc-item + .team__desc-item__active {
         .team__desc-profile {
             margin-top: 20px;
             display: flex;
@@ -39,11 +40,12 @@
         .team__desc-name {
             color: #f0ae3b;
             &:before {
-                @include triangle_down;
+                @include triangle_up;
+                transform: rotate(180deg);
             }
         }
     }
-}
+
 .team__desc-name {
     font-family: 'Gagalin';
     font-size: 14px;

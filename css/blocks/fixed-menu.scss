@@ -6,8 +6,8 @@
 }
 .fixed-menu__item {
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border: 1px solid transparent;
     position: relative;
     border-radius: 50%;
@@ -19,8 +19,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 4px;
-        height: 4px;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
         background: #fff;
     }
@@ -32,8 +32,8 @@
 }
 .fixed-menu__item_active {
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border: 1px solid #fff;
     position: relative;
     border-radius: 50%;
