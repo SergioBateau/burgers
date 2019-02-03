@@ -1,0 +1,125 @@
+.form {
+    display: flex;
+}
+
+.form__left-col,
+.form__right-col {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form__block {
+    margin-right: 20px;
+    flex: 1;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__block-input {
+    border-radius: 5px;
+    background: #fff;
+    border: none;
+    width: 100%;
+    padding: 10px 10px;
+    color: #2f3234;
+    font-family: 'Ubuntu-light';
+    font-size: 14px;
+    outline: 1px solid rgba(0, 0, 0, .0);
+}
+
+.form__block-title {
+    font-family: 'Ubuntu-light';
+    font-size: 14px;
+    color: $white;
+    margin-bottom: 5px;
+
+}
+
+.form__block-textarea {
+    font-family: 'Ubuntu-light';
+    font-size: 14px;
+    height: 110px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.form__block-checkbox {
+    display: none;
+}
+
+.form__block-checkbox-mark {
+    height: 15px;
+    width: 15px;
+    border: none;
+    display: inline-block;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 2px;
+    padding: 3px;
+}
+
+[type=checkbox]:checked+.form__block-checkbox-mark:before {
+    content: '\2713';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 23px;
+    color: red;
+}
+
+// радио
+input[type="radio"] {
+    display: none;
+}
+
+.form__payment-radio {
+    // position: relative;
+    // display: inline-block;
+    // width: 16px;
+    // height: 16px;
+    // background: $white;
+    // border-radius: 50%;
+    // margin-right: 10px;
+    padding-left: 22px;
+	position: relative;
+}
+.form__payment-radio:before {
+    background: #fff;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+}
+.form__payment-radio:after {
+    background-color: red;
+	border-radius: 50%;
+	width: 6px;
+	height: 6px;
+	top: 5px;
+	left: 5px;
+	content: '';
+	position: absolute;
+	opacity: 0;
+}
+input[type="radio"]:checked + .form__payment-radio:after {
+    opacity: 1;
+}
+
+.form__payment-radio {
+    margin-right: 20px;
+    display: flex;
+
+}

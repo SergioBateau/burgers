@@ -10,16 +10,16 @@
 
     }
 
-    .menu {
+    .header__menu {
         font-size: 13px;
         text-transform: uppercase;
 
-        .menu__list {
+        .header__menu__list {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
 
-            .menu__item {
+            .header__menu__item {
 
                 display: flex;
                 align-items: center;
@@ -40,7 +40,7 @@
                     margin: 0 10px;
                 }
 
-                .menu__item__link {
+                .header__menu__item__link {
                     color: $white;
                     text-decoration: none;
 
