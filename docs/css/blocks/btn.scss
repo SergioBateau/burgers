@@ -1,9 +1,9 @@
 .btn {
-    padding: 8px 15px;
+    padding: rem(8px) rem(15px);
     background: $orange;
-    border: 1px solid $orange;
-    border-radius: 5px;
-    font-size: 13px;
+    border: rem(1px) solid $orange;
+    border-radius: rem(5px);
+    font-size: rem(13px);
     color: $white;
     cursor: pointer;
     text-transform: uppercase;

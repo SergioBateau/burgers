@@ -1,20 +1,35 @@
 .form {
     display: flex;
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .form__left-col,
 .form__right-col {
     width: 50%;
-    padding: 0 10px;
+    margin: 0 rem(10px);
+    @include tablets() {
+        width: 100%;
+        padding: 0 10%;
+    }
+    @include phones() {
+        padding: 0;
+    }
 }
 
 .form__row {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
+    @include phones() {
+        justify-content: center;
+    }
 }
 
 .form__block {
-    margin-right: 20px;
+    margin-right: rem(20px);
     flex: 1;
 
     &:last-child {
@@ -22,35 +37,37 @@
     }
 }
 
+
 .form__block-input {
-    border-radius: 5px;
+    border-radius: rem(5px);
     background: #fff;
     border: none;
     width: 100%;
-    padding: 10px 10px;
+    padding: rem(10px) rem(10px);
     color: #2f3234;
     font-family: 'Ubuntu-light';
-    font-size: 14px;
-    outline: 1px solid rgba(0, 0, 0, .0);
+    font-size: rem(14px);
+    outline: rem(1px) solid rgba(0, 0, 0, .0);
 }
 
 .form__block-title {
     font-family: 'Ubuntu-light';
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 
 }
 
 .form__block-textarea {
     font-family: 'Ubuntu-light';
-    font-size: 14px;
-    height: 110px;
+    font-size: rem(14px);
+    height: rem(110px);
     border: none;
-    border-radius: 5px;
+    border-radius: rem(5px);
     resize: none;
     width: 100%;
-    padding: 10px;
+    padding: rem(10px);
+    
 }
 
 .form__block-checkbox {
@@ -58,22 +75,22 @@
 }
 
 .form__block-checkbox-mark {
-    height: 15px;
-    width: 15px;
+    height: rem(15px);
+    width: rem(15px);
     border: none;
     display: inline-block;
     position: relative;
     background-color: #FFF;
-    border-radius: 2px;
-    padding: 3px;
+    border-radius: rem(2px);
+    padding: rem(3px);
 }
 
 [type=checkbox]:checked+.form__block-checkbox-mark:before {
     content: '\2713';
     position: absolute;
-    top: -10px;
+    top: rem(-10px);
     left: 0;
-    font-size: 23px;
+    font-size: rem(23px);
     color: red;
 }
 
@@ -83,21 +100,14 @@ input[type="radio"] {
 }
 
 .form__payment-radio {
-    // position: relative;
-    // display: inline-block;
-    // width: 16px;
-    // height: 16px;
-    // background: $white;
-    // border-radius: 50%;
-    // margin-right: 10px;
-    padding-left: 22px;
+    padding-left: rem(22px);
 	position: relative;
 }
 .form__payment-radio:before {
     background: #fff;
 	border-radius: 50%;
-	width: 16px;
-	height: 16px;
+	width: rem(16px);
+	height: rem(16px);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -106,10 +116,10 @@ input[type="radio"] {
 .form__payment-radio:after {
     background-color: red;
 	border-radius: 50%;
-	width: 6px;
-	height: 6px;
-	top: 5px;
-	left: 5px;
+	width: rem(6px);
+	height: rem(6px);
+	top: rem(5px);
+	left: rem(5px);
 	content: '';
 	position: absolute;
 	opacity: 0;
@@ -119,7 +129,7 @@ input[type="radio"]:checked + .form__payment-radio:after {
 }
 
 .form__payment-radio {
-    margin-right: 20px;
+    margin-right: rem(20px);
     display: flex;
 
 }

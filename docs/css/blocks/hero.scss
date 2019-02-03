@@ -10,7 +10,7 @@
 }
 
 .hero__order-btn {
-    margin-left: 15px;
+    margin-left: rem(15px);
 }
 
 .hero__content {
@@ -25,11 +25,11 @@
         display: flex;
         flex-flow: column;
         justify-content: center;
-        margin-left: 15px;
+        margin-left: rem(15px);
 
         .hero__slogan-text {
             font-family: 'Livehack';
-            font-size: 55px;
+            font-size: rem(55px);
             color: $white;
             line-height: 1.15;
         }

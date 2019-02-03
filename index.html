@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon/favicon.ico">
@@ -46,7 +46,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <button type="button" class="btn hero__order-btn">Заказать</button>
+                        <button type="button" class="btn header__order-btn">Заказать</button>
+                        <a href="#" class="hamburger-menu-link">
+                            <div class="hamburger-menu-link__bars"></div>
+                        </a>
                     </header>
                     <div class="hero__content">
                         <div class="hero__burger">
@@ -124,7 +127,7 @@
                     <div class="team__block">
                         <div class="team__desc">
                             <div class="team__desc-title">
-                                <h1 class="title">Команда</h1>
+                                <h1 class="title__team">Команда</h1>
                             </div>
                             <div class="team__desc-staf accordeon">
                                 <ul class="team__desc-list">
@@ -203,10 +206,26 @@
                     <h1 class="title__menu">Меню</h1>
                     <div class="menu__accordeon">
                         <ul class="menu__accordeon__list">
+                            <li class="menu__accordeon__item ">
+                                <a class="menu-accordeon__trigger" href="#" style="background-image: url('./img/background/accordeon1.jpg')"> 
+                                    <div class="title__accordeon-text">Для мясоедов</div>
+                                </a>
+                                <div class="menu__desc">
+                                    <p class="menu__text">
+                                        Речевой акт редуцирует диалектический характер. Развивая эту тему,
+                                        заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает 
+                                        диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                                        однако механизм механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
+                                        И. Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему,
+                                        заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает 
+                                        диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                                    </p>
+                                </div>
+                            </li>
                             <li class="menu__accordeon__item js-title__menu">
-                                <div class="title__accordeon title__accordeon-background-one">
-                                    <h3 class="title__accordeon-text">Для мясоедов</h3>
-                                </div>
+                                    <a class="menu-accordeon__trigger" href="#" style="background-image: url('./img/background/accordeon2.jpg')">
+                                    <div class="title__accordeon-text">Вегетарианское</div>
+                                    </a>
                                 <div class="menu__desc">
                                     <p class="menu__text">
                                         Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -220,25 +239,9 @@
                                 </div>
                             </li>
                             <li class="menu__accordeon__item">
-                                <div class="title__accordeon title__accordeon-background-two">
-                                    <h3 class="title__accordeon-text">Вегетарианское</h3>
-                                </div>
-                                <div class="menu__desc">
-                                    <p class="menu__text">
-                                        Речевой акт редуцирует диалектический характер. Развивая эту тему,
-                                        заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает 
-                                        диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                                        однако механизм механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
-                                        И. Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему,
-                                        заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает 
-                                        диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="menu__accordeon__item">
-                                <div class="title__accordeon title__accordeon-background-three">
-                                    <h3 class="title__accordeon-text">Диетическое</h3>
-                                </div>
+                                    <a class="menu-accordeon__trigger" href="#" style="background-image: url('./img/background/accordeon3.jpg')">
+                                    <div class="title__accordeon-text">Диетическое</div>
+                                    </a>
                                 <div class="menu__desc">
                                     <p class="menu__text">
                                         Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -253,13 +256,13 @@
                             </li>
                         </ul>
                     </div>
-                
+                </div>
             </section>
             <section class="section reviews">
                 <ul class="reviews__list">
                     <li class="reviews__item" style="background-image: url('./photo/smile.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -269,12 +272,13 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./photo/glasses.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -284,12 +288,13 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./photo/hear.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -299,12 +304,13 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./photo/burton.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -314,12 +320,13 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./photo/leather.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -329,12 +336,13 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./photo/nose.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -344,12 +352,13 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./photo/old.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -359,12 +368,13 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./photo/beard.jpg')">
                         <div class="reviews__item-hover">
-                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
                                 <p>
                                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
@@ -374,6 +384,7 @@
                             </div>
                             <div class="reviews__btn">
                                 <button type="button" class="btn btn__background_black">Подробнее</button>
+                                <button type="button" class="btn btn__background_reed">Читать отзыв</button>
                             </div>
                         </div>
                     </li>
@@ -443,7 +454,7 @@
                                 </div>
                             </div>
                             <div class="form__row">
-                                <label for="call" class="form__block">
+                                <label for="call" class="form__block1">
                                     <input type="checkbox" id="call" class="form__block-checkbox" checked>
                                     <span class="form__block-checkbox-mark"></span>
                                     <span class="form__block-title ">Не перезванивать</span>
@@ -478,9 +489,10 @@
                             <ul class="footer-soc__list">
                                 <li class="footer_soc-item">
                                     <a href="#" class="soc__link">
-                                        <svg class="vk-icon">
+                                        <!-- <svg class="vk-icon">
                                             <use xlink:href="./img/sprite.svg#vk"></use>
-                                        </svg>
+                                        </svg> -->
+                                        <img src="./img/logo/vk.svg" class="vk-icon" alt="vk">
                                     </a>
                                 </li>
                                 <li class="footer_soc-item">

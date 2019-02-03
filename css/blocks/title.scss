@@ -2,7 +2,12 @@
     color: $white;
     position: absolute;
     top: 7%;
-    left: 10%;
+    left: 8%;
     
-    margin-bottom: 30px;
+    
+}
+.title__team {
+    @include tablets() {
+        text-align: center;
+    }
 }

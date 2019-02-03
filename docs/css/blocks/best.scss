@@ -8,7 +8,7 @@
 }
 .best__item {
     flex: 1;
-    margin-right: 15px;
+    margin-right: rem(15px);
     text-align: center;
     &:last-child {
         margin-right: 0;
@@ -19,10 +19,10 @@
 }
 .best__desc-title {
     font-family: 'Livehack';
-    font-size: 24px;
+    font-size: rem(24px);
 }
 .best__desc-text {
     font-family: 'Ubuntu-light';
-    font-size: 14px;
+    font-size: rem(14px);
     color: #2f3234;
 }

@@ -34,7 +34,7 @@
     right: 0;
     bottom: 0;
     background: rgba(#000, 0.5);
-    padding: 24px 22px;
+    padding: rem(24px) rem(22px);
     color: $white;
     text-align: left;
     opacity: 0;
@@ -46,11 +46,11 @@
 }
 .reviews__title {
     font-family: 'Gagalin';
-    font-size: 14px;
+    font-size: rem(14px);
 }
 .reviews__text {
     font-family: 'Ubuntu-light';
-    font-size: 14px;
+    font-size: rem(14px);
     overflow: hidden;
    
 }

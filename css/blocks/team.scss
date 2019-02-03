@@ -2,40 +2,62 @@
     background: url(./../../img/background/team-background.jpg) center center no-repeat;
     background-size: cover;
     position: relative;
+    
 }
 .team__block {
     position: absolute;
-    width: 50%;
     height: 100%;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 50%;
     background-color: #2f3133;
     filter: opacity(93%);
+    padding: 5% 2% 0 7%;
+    @include tablets() {
+        left: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
     
 }
 .team__desc {
     display: flex;
     flex-direction: column;
     width: 75%;
-    margin: 100px auto; 
+    margin: rem(100px) auto; 
 }
 .team__desc-list {
     display: flex;
     flex-flow: column nowrap;
+    @include tablets() {
+        text-align: center;
+    }
 }
 .team__desc-item {
-    margin-bottom: 45px;
+    margin-bottom: rem(45px);
+    @include tablets() {
+        margin-bottom: rem(30px);
+    }
     &:last-child {
         margin-bottom: 0;
     }
 }
 .team__desc-item + .js-team__desc-item {
         .team__desc-profile {
-            margin-top: 20px;
+            margin-top: rem(20px);
             display: flex;
-            width: 400px;
+            // width: rem(400px);
             height: auto;
             overflow: auto;
+            @include tablets() {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
         .team__desc-name {
             color: #f0ae3b;
@@ -48,23 +70,24 @@
 
 .team__desc-name {
     font-family: 'Gagalin';
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
     &:before {
         @include triangle_up;
     }
+    @include phones() {
+        font-size: rem(24px);
+    }
 }
 .team__desc-profile {
-    margin-top: 20px;
-    display: flex;
-    width: 400px;
     height: 0;
     overflow: hidden;
+
 }
 .team__profile-photo {
     // width: 33%;
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     margin: 0 auto;
     overflow: hidden;
     border-radius: 50%;
@@ -72,22 +95,28 @@
 .team__photo-pic {
     width: auto;
     height: 100%;
-    margin: 0 -20px;
+    margin: 0 rem(-20px);
 }
 .team__profile-data {
     width: 67%;
     display: flex;
     flex-flow: column nowrap;
-    margin-left: 20px;
+    margin-left: rem(20px);
+    @include tablets() {
+        margin-left: 0;
+    }
 }
 .team__profile-post {
     font-family: 'Ubuntu-b';
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+    @include tablets() {
+        margin-top: rem(16px);
+    }
 }
 .team__profile-duty {
     font-family: 'Ubuntu-light';
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
 }
