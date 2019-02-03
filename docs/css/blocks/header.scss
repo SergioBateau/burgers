@@ -1,5 +1,4 @@
 .header {
-    // min-height: rem(69px);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -11,20 +10,22 @@
 
     }
 
-    .menu {
+    .header__menu {
         font-size: rem(13px);
         text-transform: uppercase;
+        @include tablets() {
+            display: none;
+        }
 
-        .menu__list {
+        .header__menu__list {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
 
-            .menu__item {
+            .header__menu__item {
 
                 display: flex;
                 align-items: center;
-                margin-right: rem(18px);
 
                 &:last-child {
                     &:after {
@@ -39,10 +40,10 @@
                     border-radius: 50%;
                     display: inline-block;
                     background: $white;
-                    margin-left: rem(18px);
+                    margin: 0 rem(10px);
                 }
 
-                .menu__link {
+                .header__menu__item__link {
                     color: $white;
                     text-decoration: none;
 
@@ -51,4 +52,10 @@
         }
     }
 
+}
+.header__order-btn {
+    margin-left: rem(15px);
+    @include tablets() {
+        margin-left: 0;
+    }
 }

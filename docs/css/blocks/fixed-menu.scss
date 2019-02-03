@@ -2,12 +2,14 @@
     position: fixed;
     top: rem(90px);
     right: rem(40px);
-
+    @include tablets() {
+        display: none;
+    }
 }
 .fixed-menu__item {
     display: block;
-    width: rem(16px);
-    height: rem(16px);
+    width: rem(12px);
+    height: rem(12px);
     border: rem(1px) solid transparent;
     position: relative;
     border-radius: 50%;
@@ -19,8 +21,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: rem(6px);
-        height: rem(6px);
+        width: rem(5px);
+        height: rem(5px);
         border-radius: 50%;
         background: #fff;
     }
@@ -29,11 +31,14 @@
         border-color: #fff;
         cursor: pointer;
     }
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
 .fixed-menu__item_active {
+    display: block;
+    width: rem(12px);
+    height: rem(12px);
     border: rem(1px) solid #fff;
+    position: relative;
+    border-radius: 50%;
+    margin-bottom: rem(20px);
     cursor: pointer;
 }

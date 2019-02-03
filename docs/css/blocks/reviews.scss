@@ -2,6 +2,7 @@
     background: #000;
     position: relative;
 }
+
 .reviews__list {
     position: absolute;
     top: 0;
@@ -11,14 +12,20 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .reviews__item {
     width: 25%;
     height: 50%;
     background: center center / cover no-repeat;
     position: relative;
     filter: grayscale(100%);
-   
- 
+
+    @include tablets() {
+        width: 50%;
+        height: 25%;
+    }
+
+
 
     &:hover {
         .reviews__item-hover {
@@ -27,6 +34,7 @@
     }
 
 }
+
 .reviews__item-hover {
     position: absolute;
     top: 0;
@@ -42,15 +50,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    flex-wrap: nowrap;
+
+    @include tablets() {
+        text-align: center;
+    }
 }
+
 .reviews__title {
     font-family: 'Gagalin';
     font-size: rem(14px);
 }
+
 .reviews__text {
     font-family: 'Ubuntu-light';
     font-size: rem(14px);
-    overflow: hidden;
-   
+
+    @include phones() {
+        display: none;
+    }
+}
+
+.reviews__btn {
+    @include phones() {
+        display: flex;
+        justify-content: center;
+    }
 }
