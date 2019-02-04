@@ -36,3 +36,12 @@
         display: none;
     }
 }
+.header__order-btn {
+    margin-left: rem(10px);
+    
+    @include tablets() {
+        margin-left: 0;
+        position: absolute;
+        right: 8%;
+    }
+}
