@@ -58,6 +58,9 @@
 }
 .footer_soc-item {
     margin-left: rem(20px);
+    &:first-child {
+        margin-left: 0;
+    }
 }
 .soc__link {
     opacity: .3;

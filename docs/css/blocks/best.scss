@@ -19,6 +19,9 @@
         flex-direction: row;
         margin-right: 0;
         margin-bottom: rem(40px);
+        &:last-child {
+            margin-bottom: 0;
+        }
         
     }
     &:last-child {

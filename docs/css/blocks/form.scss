@@ -47,7 +47,10 @@
     color: #2f3234;
     font-family: 'Ubuntu-light';
     font-size: rem(14px);
-    outline: rem(1px) solid rgba(0, 0, 0, .0);
+    &:focus {
+    outline: 2px solid #f9b43b;
+    box-shadow: 0 0 0 1pt #f9b43b;
+    }
 }
 
 .form__block-title {
@@ -67,13 +70,25 @@
     resize: none;
     width: 100%;
     padding: rem(10px);
+    &:focus {
+        outline: 2px solid #f9b43b;
+        box-shadow: 0 0 0 1pt #f9b43b;
+        }
+    }
     
-}
+
 
 .form__block-checkbox {
     display: none;
+    &:hover {
+        cursor: pointer;
+    }
 }
-
+.form__block1 {
+    &:hover {
+        cursor: pointer;
+    }
+}
 .form__block-checkbox-mark {
     height: rem(15px);
     width: rem(15px);
@@ -101,7 +116,10 @@ input[type="radio"] {
 
 .form__payment-radio {
     padding-left: rem(22px);
-	position: relative;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .form__payment-radio:before {
     background: #fff;

@@ -11,3 +11,12 @@
         text-align: center;
     }
 }
+.title__hero {
+    @include phones(){
+        margin-bottom: 0;
+        font-size: rem(60px);
+        line-height: 1.1;
+        margin-top: 20px;
+    }
+    
+}
