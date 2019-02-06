@@ -1,0 +1,47 @@
+.btn {
+    padding: rem(8px) rem(15px);
+    background: $orange;
+    border: rem(1px) solid $orange;
+    border-radius: rem(5px);
+    font-size: rem(14px);
+    color: $white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Ubuntu-medium';
+
+    &__backgroind_black {
+        background: #000;
+       
+    }
+    &__background_reed {
+        display: none;
+        @include phones() {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+.reset__order-btn {
+    margin-left: rem(20px);
+    font-family: 'Ubuntu-light';
+    font-size: rem(14px);
+    color: $white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .0);
+    border: none;
+    outline: rem(1px) solid rgba(0, 0, 0, .0);
+}
+.btn__background_black {
+    @include phones() {
+        display: none;
+    }
+}
+.header__order-btn {
+    margin-left: rem(10px);
+    
+    @include tablets() {
+        margin-left: 0;
+        position: absolute;
+        right: 8%;
+    }
+}
