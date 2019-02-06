@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .title__menu {
     color: $white;
     position: absolute;
@@ -11,3 +12,54 @@
         text-align: center;
     }
 }
+=======
+.title__menu {
+    color: $white;
+    position: absolute;
+    top: 7%;
+    left: 8%;
+    
+    
+}
+.title__team {
+    @include tablets() {
+        text-align: center;
+    }
+    @include phones(){
+        margin-bottom: rem(30px);
+        font-size: rem(50px);
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+.title__hero {
+    @include phones(){
+        margin-bottom: 0;
+        font-size: rem(60px);
+        line-height: 1.1;
+        margin-top: 20px;
+    }
+    
+}
+.title__form {
+    text-align: center;
+    @include tablets() {
+        text-align: center;
+    }
+    @include phones(){
+        margin-bottom: 0;
+        font-size: rem(50px);
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+.title__best {
+    color: black;
+    @include phones(){
+        margin-bottom: rem(40px);
+        font-size: rem(50px);
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+>>>>>>> master

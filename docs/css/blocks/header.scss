@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header {
     display: flex;
     flex-flow: row nowrap;
@@ -59,3 +60,66 @@
         margin-left: 0;
     }
 }
+=======
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(12px);
+    
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__menu {
+        font-size: rem(13px);
+        text-transform: uppercase;
+        margin-left: rem(5px);
+        
+        @include tablets() {
+            display: none;
+        }
+
+        .header__menu__list {
+            display: flex;
+            align-items: center;
+
+            .header__menu__item {
+
+                display: flex;
+                align-items: center;
+                
+                
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+                
+                
+                &:after {
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background: $white;
+                    margin: 0 rem(10px);
+                }
+
+                .header__menu__item__link {
+                    color: $white;
+                    text-decoration: none;
+                    font-family: 'Ubuntu-medium';
+                    font-size: rem(13px);
+                    text-align: center;
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+}
+>>>>>>> master

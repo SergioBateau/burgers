@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .footer {
     position: absolute;
     bottom: 0;
@@ -64,4 +65,75 @@
     &:hover {
         opacity: 1;
     }
+=======
+.footer {
+    position: absolute;
+    bottom: 0;
+    background: #0f0f0f;
+
+    width: 100%;
+    
+}
+.footer__container {
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: rem(60px);
+    align-items: center;
+    @include phones() {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.footer__left-col {
+    width: 50%;
+}
+.footer__right-col {
+    width: 50%;
+    @include phones() {
+        justify-content: center;
+    }
+}
+.footer__left-col,
+.footer__right-col {
+    @include phones() {
+        width: 100%;
+    }
+}
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer__adress {
+    font-family: 'Ubuntu-light';
+    font-size: rem(14px);
+    color: $white;
+}
+.tel__number {
+    text-decoration: none;
+    font-family: 'Ubuntu-b';
+    font-size: rem(14px);
+    color: $orange;
+    margin-left: rem(20px);
+}
+.footer-soc__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include phones() {
+        justify-content: center;
+    }
+}
+.footer_soc-item {
+    margin-left: rem(20px);
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.soc__link {
+    opacity: .3;
+    &:hover {
+        opacity: 1;
+    }
+>>>>>>> master
 }
