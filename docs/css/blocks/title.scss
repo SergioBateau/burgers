@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+.title__menu {
+    color: $white;
+    position: absolute;
+    top: 7%;
+    left: 8%;
+    
+    
+}
+.title__team {
+    @include tablets() {
+        text-align: center;
+    }
+}
+=======
 .title__menu {
     color: $white;
     position: absolute;
@@ -47,3 +62,4 @@
         text-align: center;
     }
 }
+>>>>>>> master
