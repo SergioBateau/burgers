@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru_RU">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon/favicon.ico">
     <title>Burgers</title>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="maincontent">
@@ -14,30 +17,30 @@
                 <div class="container hero__container">
                     <header class="header">
                         <div class="logo">
-                            <img src="./img/logo/logo.png" alt="лого">
+                            <img src="./img/logo/logo.png" class="logo__pic" alt="лого">
                         </div>
                         <div class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="#" class="menu__item__link">О нас</a>
+                                    <a href="#" class="menu__link">О нас</a>
                                 </li>
                                 <li class="menu__item">
-                                        <a href="#" class="menu__item__link">Бургеры</a>
+                                    <a href="#" class="menu__link">Бургеры</a>
                                 </li>
                                 <li class="menu__item">
-                                        <a href="#" class="menu__item__link">Команда</a>
+                                    <a href="#" class="menu__link">Команда</a>
                                 </li>
                                 <li class="menu__item">
-                                        <a href="#" class="menu__item__link">Меню</a>
+                                    <a href="#" class="menu__link">Меню</a>
                                 </li>
                                 <li class="menu__item">
-                                        <a href="#" class="menu__item__link">Отзывы</a>
+                                    <a href="#reviews" class="menu__link">Отзывы</a>
                                 </li>
                                 <li class="menu__item">
-                                        <a href="#" class="menu__item__link">Как мы работаем</a>
+                                    <a href="#" class="menu__link">Как мы работаем</a>
                                 </li>
                                 <li class="menu__item">
-                                        <a href="#" class="menu__item__link">Контакты</a>
+                                    <a href="#" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -48,13 +51,13 @@
                             <img src="./img/burgers/burgers-welcome.png" class="hero__burger-img" alt="Бургер">
                         </div>
                         <div class="hero__slogan">
-                            <h1 class="title">МЫ ДЕЛАЕМ</h1>
+                            <h1 class="title">Мы делаем</h1>
                             <div class="hero__slogan-text">натуральные бургеры</div>
                         </div>
                     </div>
-                    <div class="hero__sidebar">
-                        <a href="#" class="sidebar__link">
-                            <img src="./img/first_section/arrow-scroll.png" alt="Скролл">
+                    <div class="hero__arrow-scroll">
+                        <a href="#" class="arrow-scroll__link">
+                            <img src="./img/first_section/arrow-scroll.png" alt="Скролл" class="arrow-scroll__pic">
                         </a>
                     </div>
                 </div>
@@ -70,8 +73,9 @@
                             <div class="best__desc">
                                 <div class="best__desc-title">100% свежее мясо</div>
                                 <div class="best__desc-content">
-                                    <p>
-                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                                    <p class="best__desc-text">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой
+                                        анапест. Ямб неравномерен.
                                     </p>
                                 </div>
                             </div>
@@ -82,8 +86,9 @@
                             <div class="best__desc">
                                 <div class="best__desc-title">Ручная сборка</div>
                                 <div class="best__desc-content">
-                                    <p>
-                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                    <p class="best__desc-text">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой
+                                        анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
                                     </p>
                                 </div>
                             </div>
@@ -94,8 +99,9 @@
                             <div class="best__desc">
                                 <div class="best__desc-title">Натуральные ингридиенты</div>
                                 <div class="best__desc-content">
-                                    <p>
-                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                    <p class="best__desc-text">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой
+                                        анапест.
                                     </p>
                                 </div>
                             </div>
@@ -103,7 +109,165 @@
                     </ul>
                 </div>
             </section>
+            <section class="section reviews">
+                <ul class="reviews__list">
+                    <li class="reviews__item" style="background-image: url('./photo/smile.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item" style="background-image: url('./photo/glasses.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item" style="background-image: url('./photo/hear.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item" style="background-image: url('./photo/burton.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item" style="background-image: url('./photo/leather.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item" style="background-image: url('./photo/nose.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item" style="background-image: url('./photo/old.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item" style="background-image: url('./photo/beard.jpg')">
+                        <div class="reviews__item-hover">
+                            <div class="reviews__title">Константин</div>
+                            <div class="reviews__text">
+                                <p>
+                                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а
+                                    сыр таким расплавленным.
+
+                                </p>
+                            </div>
+                            <div class="reviews__btn">
+                                <button type="button" class="btn btn__background_black">Подробнее</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </section>
         </div>
+        <nav class="fixed-menu">
+            <ul class="fixed-menu__list">
+                <li class="fixed-menu__item fixed-menu__item_active">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="#" class="fixed-menu__link"></a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </body>
+
 </html>
