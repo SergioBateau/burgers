@@ -1,66 +1,3 @@
-<<<<<<< HEAD
-.header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-
-    .logo {
-        display: flex;
-        align-items: center;
-
-    }
-
-    .header__menu {
-        font-size: rem(13px);
-        text-transform: uppercase;
-        @include tablets() {
-            display: none;
-        }
-
-        .header__menu__list {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-
-            .header__menu__item {
-
-                display: flex;
-                align-items: center;
-
-                &:last-child {
-                    &:after {
-                        display: none;
-                    }
-                }
-
-                &:after {
-                    content: "";
-                    width: rem(6px);
-                    height: rem(6px);
-                    border-radius: 50%;
-                    display: inline-block;
-                    background: $white;
-                    margin: 0 rem(10px);
-                }
-
-                .header__menu__item__link {
-                    color: $white;
-                    text-decoration: none;
-
-                }
-            }
-        }
-    }
-
-}
-.header__order-btn {
-    margin-left: rem(15px);
-    @include tablets() {
-        margin-left: 0;
-    }
-}
-=======
 .header {
     display: flex;
     justify-content: space-between;
@@ -122,4 +59,3 @@
     }
 
 }
->>>>>>> master

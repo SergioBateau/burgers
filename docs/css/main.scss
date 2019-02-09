@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $white: #ffffff;
 $orange: #e45028;
 $red: #e35028;
@@ -39,46 +38,6 @@ $phones: 480px;
 @import "./blocks/order.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/form.scss";
-=======
-$white: #ffffff;
-$orange: #e45028;
-$red: #e35028;
-$black: #2f3234;
-$yellow: #f9b43b;
-@mixin triangle_up{
-    display: inline-block;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: rem(6px) solid transparent;
-    border-right: rem(6px) solid transparent;
-    border-bottom: rem(9px) solid #f9b43b;
-    margin-right: rem(10px);
-}
-// breakpoints'
-$tablets: 768px;
-$phones: 480px;
-
-// layout
-@import "layout/fonts.css";
-@import "layout/media.scss";
-@import "layout/normalize.css";
-@import "layout/base.scss";
-
-
-// blocks
-@import "./blocks/header.scss";
-@import "./blocks/hero.scss";
-@import "./blocks/btn.scss";
-@import "./blocks/title.scss";
-@import "./blocks/best.scss";
-@import "./blocks/reviews.scss";
-@import "./blocks/fixed-menu.scss";
-@import "./blocks/team.scss";
-@import "./blocks/map.scss";
-@import "./blocks/footer.scss";
-@import "./blocks/order.scss";
-@import "./blocks/menu.scss";
-@import "./blocks/form.scss";
->>>>>>> master
 @import "./blocks/hamburger-menu-link.scss";
+@import "./blocks/burgers.scss";
+@import "./blocks/svg-icon.scss";
