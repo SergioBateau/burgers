@@ -45,3 +45,9 @@
         right: 8%;
     }
 }
+.burgers__order-btn {
+    margin-left: rem(30px);
+    @include phones() {
+        margin-left: rem(10px);
+    }
+}
