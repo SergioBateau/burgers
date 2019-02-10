@@ -64,6 +64,8 @@
 .reviews__text {
     font-family: 'Ubuntu-light';
     font-size: rem(14px);
+    overflow: hidden;
+    margin-bottom: rem(10px);
 
     @include phones() {
         display: none;

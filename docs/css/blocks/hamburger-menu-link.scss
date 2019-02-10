@@ -37,3 +37,92 @@
         bottom: 0;
     }
 }
+
+.hamburger-menu {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2f3234;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.logo__link {
+    width: 100%;
+
+}
+
+.logo--hamburger-menu {
+    position: absolute;
+    left: 2.5%;
+    top: rem(9px);
+}
+
+.nav {
+    align-self: center;
+}
+
+.nav__list--hamburger--menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: inline-block;
+        background: $white;
+        margin: rem(25px) rem(10px);
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    font-family: 'Ubuntu-regular';
+    font-size: rem(24px);
+    color: $white;
+    text-transform: uppercase;
+
+}
+
+.close {
+    background: #c1c2c2;
+    height: 30px;
+    position: relative;
+    width: 6px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    position: absolute;
+    right: 10%;
+    top: rem(20px);
+    &:after {
+        background: #c1c2c2;
+        content: "";
+        height: 6px;
+        left: -12px;
+        position: absolute;
+        top: 12px;
+        width: 30px;
+        border-radius: 2px;
+        
+    }
+}

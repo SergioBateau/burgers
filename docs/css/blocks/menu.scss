@@ -1,5 +1,5 @@
 .menu {
-    background: url(./../../img/background/menu-background.jpg) center center / cover no-repeat;
+    background: url(./../img/background/menu-background.jpg) center center / cover no-repeat;
     position: relative;
 }
 .menu__accordeon {
@@ -7,7 +7,7 @@
     justify-content: flex-end;
     height: 100%;
 }
-.menu__accordeon__list {
+.menu__accordeon-list {
     display: flex;
     position: absolute;
     right: 0;
@@ -17,7 +17,7 @@
     height: 100%;
 }
 
-.menu__accordeon__item {
+.menu__accordeon-item {
     display: flex;
     height: 100%;
 }
@@ -26,7 +26,7 @@
     min-width: rem(80px);
     display: flex;
     height: 100%;
-    float: left;
+    // float: left;
     text-decoration: none;
     position: relative;
     background-size: cover;
@@ -67,11 +67,12 @@
     overflow: hidden;
     background: rgba(#2f3234, .93);
     height: 100%;
-    float: left;
+    // float: left;
+    
 }
 .js-title__menu {
    
-    width: 47%;
+    width: 45%;
     @include tablets {
       width: 100%;
     }

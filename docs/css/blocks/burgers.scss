@@ -4,21 +4,11 @@
 
 .burgers__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    
+    height: 100vh;
 }
-.burgers__left-btn {
-    position: absolute;
-    left: 0;
-    top: 50%;
-}
-.burgers__right-btn {
-    position: absolute;
-    right: 0;
-    top: 50%;
-}
+
 .arrow-scroll-icon-left {
     transform: rotate(90deg);
 }
@@ -37,35 +27,21 @@
     max-height: 100%;
 }
 
-.burgers__slider {
+.burgers__content {
     display: flex;
-    overflow: hidden;
-}
-.items__slider {
-    display: flex;
-    position: relative;
-    transition: right 0.3s;
-    right: 0;
-}
-.item__slider {
-    height: 100vh;
-    display: flex;
-    width: 100%;
-    flex-shrink: 0;
     justify-content: center;
     align-items: center;
 
     @include tablets() {
         flex-direction: column;
-        text-align: center;
+        text-align: center
     }
-   
-
 }
-.burgers__slider-left-col {
+
+.burgers__content-left-col {
     display: flex;
     position: relative;
-    width: 45%;
+    width: 50%;
 
     @include tablets() {
         width: 100%;
@@ -73,11 +49,11 @@
 
 }
 
-.burgers__slider-right-col {
+.burgers__content-right-col {
     display: flex;
     flex-direction: column;
     margin-left: rem(20px);
-    width: 45%;
+    width: 50%;
 
     @include tablets() {
         width: 100%;
@@ -128,7 +104,7 @@
 
 .burgers__struck {
     position: absolute;
-    top: -15%;
+    top: -20%;
     left: 0;
     width: 90px;
     height: 90px;
@@ -139,7 +115,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 1000;
 }
 
 .burger-icon-link,
@@ -158,8 +133,6 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 60px;
-    height: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,8 +141,8 @@
     opacity: .5;
 
     @include tablets() {
-        top: -10%;
-        left: 80%;
+        top: -20%;
+        right: -80%;
         
     }
 }
@@ -179,7 +152,7 @@
     font-size: 20px;
     color: $white;
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 15px;
     @include tablets() {
         right: 15px;
@@ -191,33 +164,18 @@
     left: 90px;
     top: 0;
     width: 270px;
-    height: 383px;
+    height: 332px;
     background-color: #fff;
     opacity: 0.9;
     border-radius: 5px;
     display: flex;
-    display: none;
-    
-    @include tablets {
-        width: 322px;
-        height: 332px;
-    }
-    @include phones {
-        width: 210px;
-        height: 302px;
-    }
+    // display: none;
 }
 .struck-menu-list {
     display: flex;
     flex-direction: column;
-    padding: rem(20px);
+    padding: rem(20px) rem(20px);
     width: 100%;
-    @include tablets {
-        padding-right: rem(72px);
-    }
-    @include phones {
-        padding: rem(10px) rem(60px) rem(10px) rem(10px);
-    }
     
 }
 .struck-menu-item {
@@ -230,49 +188,17 @@
     &:last-child {
         margin-bottom: 0;
     }
-    @include tablets{
-        margin-bottom: rem(10px);
-    }
+    
 }
 .srtuck-item__name {
     font-family: 'Ubuntu-medium';
     font-size: rem(14px);
     margin-right: rem(30px);
     color: #2f3234;
-    @include phones {
-        margin-right: rem(10px);
-    }
     
 }
 .struck-item__gramm {
     font-family: 'Ubuntu-light';
     font-size: rem(14px);
     color: #2f3234;
-}
-.close_struck {
-    display: none;
-    background: #eb8262;
-    height: 30px;
-    position: relative;
-    width: 6px;
-    transform: rotate(45deg);
-    border-radius: 2px;
-    position: absolute;
-    right: 10%;
-    top: rem(20px);
-    &:after {
-        background: #eb8262;
-        content: "";
-        height: 6px;
-        left: -12px;
-        position: absolute;
-        top: 12px;
-        width: 30px;
-        border-radius: 2px;
-        
-    }
-    @include tablets() {
-        display: block;
-        
-    }
 }

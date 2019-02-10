@@ -1,42 +1,45 @@
 .header {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-top: rem(12px);
+    
 
     .logo {
         display: flex;
         align-items: center;
-
     }
 
     .header__menu {
         font-size: rem(13px);
         text-transform: uppercase;
+        margin-left: rem(5px);
+        
         @include tablets() {
             display: none;
         }
 
         .header__menu__list {
             display: flex;
-            flex-flow: row nowrap;
             align-items: center;
 
             .header__menu__item {
 
                 display: flex;
                 align-items: center;
-
+                
+                
                 &:last-child {
                     &:after {
                         display: none;
                     }
                 }
-
+                
+                
                 &:after {
                     content: "";
-                    width: rem(6px);
-                    height: rem(6px);
+                    width: 6px;
+                    height: 6px;
                     border-radius: 50%;
                     display: inline-block;
                     background: $white;
@@ -46,16 +49,13 @@
                 .header__menu__item__link {
                     color: $white;
                     text-decoration: none;
-
+                    font-family: 'Ubuntu-medium';
+                    font-size: rem(13px);
+                    text-align: center;
+                    flex: 1;
                 }
             }
         }
     }
 
-}
-.header__order-btn {
-    margin-left: rem(15px);
-    @include tablets() {
-        margin-left: 0;
-    }
 }

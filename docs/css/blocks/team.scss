@@ -1,5 +1,5 @@
 .team {
-    background: url(./../../img/background/team-background.jpg) center center no-repeat;
+    background: url(./../img/background/team-background.jpg) center center no-repeat;
     background-size: cover;
     position: relative;
     
@@ -13,7 +13,7 @@
     left: 50%;
     background-color: #2f3133;
     filter: opacity(93%);
-    padding: 5% 2% 0 7%;
+    padding: 4%;
     @include tablets() {
         left: 0%;
         display: flex;
@@ -26,8 +26,10 @@
 .team__desc {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: rem(100px) auto; 
+    
+    @include phones() {
+        margin: 0;
+    }
 }
 .team__desc-list {
     display: flex;
@@ -72,6 +74,7 @@
     font-family: 'Gagalin';
     font-size: rem(14px);
     color: $white;
+    cursor: pointer;
     &:before {
         @include triangle_up;
     }
@@ -82,15 +85,19 @@
 .team__desc-profile {
     height: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    transition: height .3s;
 
 }
 .team__profile-photo {
     // width: 33%;
     width: rem(100px);
     height: rem(100px);
-    margin: 0 auto;
+    margin-left: rem(20px);
     overflow: hidden;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 .team__photo-pic {
     width: auto;
