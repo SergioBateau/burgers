@@ -471,7 +471,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="reviews__item" style="background-image: url('./photo/glasses.jpg')">
+                    <li class="reviews__item reviews__item-fix" style="background-image: url('./photo/glasses.jpg')">
                         <div class="reviews__item-hover">
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">
@@ -798,6 +798,8 @@
             myMap.geoObjects.add(myPlacemark1);
             myMap.geoObjects.add(myPlacemark2);
             myMap.geoObjects.add(myPlacemark3);
+
+            myMap.behaviors.disable('scrollZoom');
         })
     </script>
 </body>
