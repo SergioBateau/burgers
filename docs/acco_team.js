@@ -1,23 +1,28 @@
-const items = document.querySelectorAll('.team__desc-item');
+var items1 = document.querySelectorAll('.team__desc-item');
 // нашли все.menu__accordeon-item
 
-for (const item of items) {
+for (var item of items1) {
     //перебираем все .menu__accordeon-item
     item.addEventListener('click', e => {
         //навесим клик на каждый .menu__accordeon-item
 
-        const curItem = e.currentTarget;
+        var curItem = e.currentTarget;
         // ссылается на элемент на которое предназначалось событие
 
-        const content = curItem.querySelector('.team__desc-profile');
+        var content = curItem.querySelector('.team__desc-profile');
        
 
-        const textBlock = content.firstElementChild;
+        var profilePhoto = content.firstElementChild;
         // находим первый блок .menu__text
-
-        const reqHeight = textBlock.getBoundingClientRect().height;
+        console.log(profilePhoto);
+        
+        var profileDuty = content.getElementsByTagName('div')[1];
+        console.log(profileDuty);
+        
+        var reqHeight = (profilePhoto.getBoundingClientRect().height)+(profileDuty.getBoundingClientRect().height);
         
         // открыть на исходную высоту
+        console.log(reqHeight);
         
         
 
@@ -27,7 +32,7 @@ for (const item of items) {
             content.style.height = 0;
         } else {
             // пункт закрыт
-            Array.from(items).forEach(elem => {
+            Array.from(items1).forEach(elem => {
                 elem.classList.remove('js-team__desc-item');
                 elem.querySelector('.team__desc-profile').style.height=0;
             });
