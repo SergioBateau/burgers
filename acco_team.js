@@ -1,5 +1,6 @@
 var items1 = document.querySelectorAll('.team__desc-item');
 // нашли все.menu__accordeon-item
+console.log(items1);
 
 for (var item of items1) {
     //перебираем все .menu__accordeon-item
@@ -13,13 +14,16 @@ for (var item of items1) {
        
 
         var profilePhoto = content.firstElementChild;
-        // находим первый блок .menu__text
+       
         console.log(profilePhoto);
         
-        var profileDuty = content.getElementsByTagName('div')[1];
+        var profileData = content.getElementsByTagName('div')[1];
+        console.log(profileData);
+        var profileDuty = profileData.getElementsByTagName('div')[0];
         console.log(profileDuty);
-        
-        var reqHeight = (profilePhoto.getBoundingClientRect().height)+(profileDuty.getBoundingClientRect().height);
+        var profilePost = profileData.getElementsByTagName('h4')[0];
+        console.log(profilePost);
+        var reqHeight = profileDuty.getBoundingClientRect().height+profilePhoto.getBoundingClientRect().height+profilePost.getBoundingClientRect().height;
         
         // открыть на исходную высоту
         console.log(reqHeight);
