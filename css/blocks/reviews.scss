@@ -24,6 +24,9 @@
         width: 50%;
         height: 25%;
     }
+    &+.reviews__item-fix {
+        background: center left / cover no-repeat;
+    }
 
 
 
