@@ -822,6 +822,10 @@
                                                 <h4 class="team__profile-post">Оператор</h4>
                                                 <div class="team__profile-duty">
                                                     С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                                    С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                                    С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                                    С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                                    С радостью поможет подобрать идеальный бургер и оформить заказ.
                                                 </div>
                                             </div>
                                         </div>
@@ -1096,16 +1100,18 @@
             <section class="section section_centered order">
                 <div class="container">
                     <h1 class="title__form">Закажите доставку</h1>
-                    <form action="" class="form">
+                    <form action="" class="form" id="myForm" name="form" >
                         <div class="form__left-col">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__block-title">Имя</div>
-                                    <input type="text" id="name" class="form__block-input">
+                                    <input type="text" id="name" name="name" class="form__block-input" required>
+                                    <div class="error"></div>
                                 </label>
                                 <label class="form__block">
                                     <div class="form__block-title">Телефон</div>
-                                    <input type="tel" id="phone_number" class="form__block-input" placeholder="89212264923">
+                                    <input type="tel" id="phone_number" name="phone_number" class="form__block-input" placeholder="89212264923" required>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                             <div class="form__row">
@@ -1138,7 +1144,8 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__block-title">Комментарий</div>
-                                    <textarea type="text" id="comment" class="form__block-textarea"></textarea>
+                                    <textarea type="text" id="comment" name="comment" class="form__block-textarea" required></textarea>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                             <div class="form__row">
@@ -1163,7 +1170,7 @@
                                 </label>
                             </div>
                             <div class="form__row">
-                                <button type="button" class="btn form__order-btn">Заказать</button>
+                                <button type="button" class="btn form__order-btn" id="send">Заказать</button>
                                 <button type="reset" class="reset__order-btn">Очистить</button>
 
                             </div>
@@ -1289,6 +1296,18 @@
             </div>
         </div>
     </div>
+    <div class="popup-form">
+        <div class="overlay-form">
+            <div class="popup-form__container">
+                <a href="#" class="popup-form__close"></a>
+                <div class="popup-form__content">
+                    <div class="popup-form__text">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=d6613793-dc52-4243-b9ad-f323852fe51b&lang=ru_RU" type="text/javascript">
     </script>
     <script src='./acco_team.js'></script>
@@ -1297,6 +1316,7 @@
     <script src='./burgers-stuck.js'></script>
     <script src='./burgers-slider.js'></script>
     <script src='./overlay.js'></script>
+    <script src='./formData.js'></script>
     <script type="text/javascript">
         let myMap;
         ymaps.ready(function () {
