@@ -1,6 +1,11 @@
 @function rem($px) {
     @return $px / 16px + 0rem;
 }
+@mixin comp () {
+    @media screen and (max-width: $comp) {
+        @content;
+    }
+}
 @mixin desc () {
     @media screen and (max-width: $desc) {
         @content;
