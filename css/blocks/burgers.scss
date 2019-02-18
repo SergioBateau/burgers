@@ -25,6 +25,7 @@
 .dark__burger__img {
     max-width: 100%;
     max-height: 100%;
+    
 }
 
 .burgers__slider {
@@ -74,10 +75,15 @@
 .burgers__slider-left-col {
     display: flex;
     position: relative;
+    align-items: center;
     width: 50%;
+    height: 100vh;
 
     @include tablets() {
         width: 100%;
+        height: 50vh;
+        align-items: flex-end;
+        margin-bottom: rem(20px);
     }
 
 }
@@ -137,7 +143,7 @@
 
 .burgers__struck {
     position: absolute;
-    top: -15%;
+    top: 25%;
     left: 0;
     width: 90px;
     height: 90px;
@@ -149,6 +155,12 @@
     justify-content: center;
     text-align: center;
     z-index: 1000;
+    @include tablets {
+        top: 25%;
+    }
+    @include phones {
+        top: -2%;
+    }
 }
 
 .burger-icon-link,
@@ -165,7 +177,7 @@
 
 .burgers__kkal {
     position: absolute;
-    top: 100%;
+    bottom: 25%;
     left: 0;
     width: 60px;
     height: 60px;
@@ -177,11 +189,11 @@
     opacity: .5;
 
     @include tablets() {
-        top: -10%;
+        top: 28%;
         left: 75%;
-        
     }
     @include phones() {
+        top: 5%;
         left: 70%;
         
     }

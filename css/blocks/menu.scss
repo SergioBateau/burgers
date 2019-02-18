@@ -2,11 +2,13 @@
     background: url(./../img/background/menu-background.jpg) center center / cover no-repeat;
     position: relative;
 }
+
 .menu__accordeon {
     display: flex;
     justify-content: flex-end;
     height: 100%;
 }
+
 .menu__accordeon-list {
     display: flex;
     position: absolute;
@@ -20,6 +22,7 @@
 .menu__accordeon-item {
     display: flex;
     height: 100%;
+    cursor: pointer;
 }
 
 .menu-accordeon__trigger {
@@ -30,12 +33,14 @@
     text-decoration: none;
     position: relative;
     background-size: cover;
-	background-position: center center;
+    background-position: center center;
     background-repeat: no-repeat;
     padding: 3% 2%;
+
     @include phones {
         min-width: rem(40px);
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -43,8 +48,9 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(20,20,20,0.7);
+        background: rgba(20, 20, 20, 0.7);
         display: block;
+
     }
 }
 
@@ -68,24 +74,25 @@
     background: rgba(#2f3234, .93);
     height: 100%;
     // float: left;
-    
-}
-.js-title__menu {
-   
-    width: 45%;
-    @include tablets {
-      width: 100%;
-    }
-    @include phones {
-   width: 100%;
-    }
-  }
-.js-title__menu .title__accordeon-text {
-    color: $yellow;
+
 }
 
-.js-title__menu .menu__desc {
-    width: 100%;
+.js-title__menu {
+    width: 70%;
+
+    @include tablets {
+        width: 100%;
+    }
+
+    @include phones {
+        width: 100%;
+    }
+    .title__accordeon-text {
+        color: $yellow;
+    }
+    .menu__desc {
+        width: 100%;
+    }
 }
 
 .menu__text {
@@ -93,5 +100,5 @@
     font-size: rem(14px);
     color: $white;
     padding: rem(60px) rem(30px);
-    
+
 }
