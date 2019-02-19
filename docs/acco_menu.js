@@ -14,7 +14,7 @@ let verticalAcco = () => {
     oMenulink.forEach(function (personName) {
         personName.addEventListener("click", function (e) {
             e.preventDefault();
-            let activePerson = document.querySelector(".menu__accordeon-item.js-title__menu");
+            let activePerson = document.querySelector(".js-title__menu");
 
             if (activePerson) {
                 let teamAccordeonDetails = activePerson.querySelector(".menu__desc");
@@ -22,7 +22,7 @@ let verticalAcco = () => {
                 activePerson.classList.remove("js-title__menu");
             }
 
-            if (!activePerson || activePerson.querySelector(".menu-accordeon__trigger") != e.target) {
+            else {
                 let currentPerson = e.target.closest(".menu__accordeon-item");
                 currentPerson.classList.add("js-title__menu");
 
