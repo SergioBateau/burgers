@@ -120,8 +120,8 @@
         @include triangle_up;
     }
 
-    @include phones() {
-        font-size: rem(24px);
+    @include tablets() {
+        font-size: rem(25px);
     }
 }
 .team__desc-profile {
@@ -136,7 +136,6 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: auto;
         margin-top: rem(4px);
     }
 
@@ -172,11 +171,11 @@
 .team__desc-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: rem(45px);
+    margin-bottom: rem(20px);
     
 
     @include tablets() {
-        margin-bottom: rem(30px);
+        margin-bottom: rem(10px);
     }
 
     &:last-child {

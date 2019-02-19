@@ -8,6 +8,9 @@
     cursor: pointer;
     text-transform: uppercase;
     font-family: 'Ubuntu-medium';
+    .popup-form__close {
+        font-size: rem(13px);
+    }
 
     &__backgroind_black {
         background: #000;
