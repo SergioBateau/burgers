@@ -24,6 +24,9 @@
 }
 
 .title__hero {
+    @include tablets() {
+        margin-bottom: rem(10px);
+    }
     @include phones() {
         margin-bottom: 0;
         font-size: rem(60px);

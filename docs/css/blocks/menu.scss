@@ -36,6 +36,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     padding: 3% 2%;
+
     @include phones {
         min-width: rem(40px);
     }

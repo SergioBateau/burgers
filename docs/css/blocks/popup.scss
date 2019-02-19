@@ -79,22 +79,22 @@
 }
 .popup__close {
     background: #eb8262;
-    height: 30px;
+    height: 25px;
     position: relative;
-    width: 6px;
+    width: 5px;
     transform: rotate(45deg);
     border-radius: 2px;
     position: absolute;
-    right: 10%;
-    top: rem(30px);
+    right: 5%;
+    top: 3%;
     &:after {
         background: #eb8262;
         content: "";
-        height: 6px;
-        left: -12px;
+        height: 5px;
+        left:-10px;
         position: absolute;
-        top: 12px;
-        width: 30px;
+        top: 10px;
+        width: 25px;
         border-radius: 2px;
         
     }

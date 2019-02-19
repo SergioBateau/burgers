@@ -17,11 +17,11 @@ for (burgerStruck of burgerStrucks) {
         if (burgerMenuStuck.style.display = 'none') {
         burgerMenuStuck.style.display = 'block';
         } 
-        
+        burgerStuckCloseIcon.addEventListener('click', function (e) {
+            e.preventDefault();
+            burgerMenuStuck.style.display = 'none';
     })
 
-    burgerStuckCloseIcon.addEventListener('click', function (e) {
-        e.preventDefault();
-        burgerMenuStuck.style.display = 'none';
+    
     })
 }

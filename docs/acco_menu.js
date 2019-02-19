@@ -22,7 +22,7 @@ let verticalAcco = () => {
                 activePerson.classList.remove("js-title__menu");
             }
 
-            else {
+            else { 
                 let currentPerson = e.target.closest(".menu__accordeon-item");
                 currentPerson.classList.add("js-title__menu");
 
