@@ -20,9 +20,10 @@ let verticalAcco = () => {
                 let teamAccordeonDetails = activePerson.querySelector(".menu__desc");
                 teamAccordeonDetails.style.width = "0px";
                 activePerson.classList.remove("js-title__menu");
+                
             }
 
-            if (!activePerson || activePerson.querySelector(".menu-accordeon__trigger") != e.target) { 
+             if (!activePerson || activePerson.querySelector(".menu-accordeon__trigger") != e.target) { 
                 let currentPerson = e.target.closest(".menu__accordeon-item");
                 currentPerson.classList.add("js-title__menu");
 
