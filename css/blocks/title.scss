@@ -76,3 +76,18 @@
         margin-bottom: rem(20px);
     }
 }
+.title__video {
+    color: black;
+    font-size: rem(60px);
+    margin-top: rem(90px);
+    margin-bottom: rem(20px);
+    @include tablets () {
+        font-size: rem(72px);
+        margin-top: rem(215px);
+    }
+    @include phones () {
+        font-size: rem(50px);
+        margin-top: rem(160px);
+    }
+
+}
