@@ -20,15 +20,17 @@ let verticalAcco = () => {
                 let teamAccordeonDetails = activePerson.querySelector(".menu__desc");
                 teamAccordeonDetails.style.width = "0px";
                 activePerson.classList.remove("js-title__menu");
+                
             }
 
-            else { 
+             if (!activePerson || ((activePerson.querySelector(".title__accordeon-text") != e.target) && (activePerson.querySelector(".menu-accordeon__trigger") != e.target))) { 
                 let currentPerson = e.target.closest(".menu__accordeon-item");
                 currentPerson.classList.add("js-title__menu");
 
                 let currentPersonInfo = currentPerson.querySelector(".menu__desc");
                 currentPersonInfo.style.width = calculateWidth() + "px";
-            }
+            } 
+            
         })
     })
 }
