@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper">
         <div class="maincontent">
-            <section class="section hero">
+            <section class="section hero active">
                 <div class="container hero__container">
                     <header class="header">
                         <div class="logo">
@@ -25,29 +25,29 @@
                         <div class="header__menu">
                             <ul class="header__menu__list">
                                 <li class="header__menu__item">
-                                    <a href="#best" class="header__menu__item__link">О нас</a>
+                                    <a href="#best" class="header__menu__item__link" data-scroll-to="1">О нас</a>
                                 </li>
                                 <li class="header__menu__item">
-                                    <a href="#burgers" class="header__menu__item__link">Бургеры</a>
+                                    <a href="#burgers" class="header__menu__item__link" data-scroll-to="2">Бургеры</a>
                                 </li>
                                 <li class="header__menu__item">
-                                    <a href="#team" class="header__menu__item__link">Команда</a>
+                                    <a href="#team" class="header__menu__item__link" data-scroll-to="3">Команда</a>
                                 </li>
                                 <li class="header__menu__item">
-                                    <a href="#menu" class="header__menu__item__link">Меню</a>
+                                    <a href="#menu" class="header__menu__item__link" data-scroll-to="4">Меню</a>
                                 </li>
                                 <li class="header__menu__item">
-                                    <a href="#reviews" class="header__menu__item__link">Отзывы</a>
+                                    <a href="#reviews" class="header__menu__item__link" data-scroll-to="5">Отзывы</a>
                                 </li>
                                 <li class="header__menu__item">
-                                    <a href="#" class="header__menu__item__link">Как мы работаем</a>
+                                    <a href="#" class="header__menu__item__link" data-scroll-to="6">Как мы работаем</a>
                                 </li>
                                 <li class="header__menu__item">
-                                    <a href="#map" class="header__menu__item__link">Контакты</a>
+                                    <a href="#map" class="header__menu__item__link" data-scroll-to="8">Контакты</a>
                                 </li>
                             </ul>
                         </div>
-                        <button type="button" class="btn header__order-btn">Заказать</button>
+                        <button type="button" class="btn header__order-btn" data-scroll-to="7">Заказать</button>
                         <a href="#" class="hamburger-menu-link">
                             <div class="hamburger-menu-link__bars"></div>
                         </a>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="hero__sidebar">
-                        <a href="#" class="sidebar__link">
+                        <a href="#" class="sidebar__link" data-scroll-to="1">
                             <svg class="arrow-scroll-icon">
                                 <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
                             </svg>
@@ -266,7 +266,8 @@
                                 <div class="item__slider">
                                     <div class="burgers__slider-left-col">
                                         <div class="burgers__img">
-                                            <img src="./img/burgers/Chiken burger.png" style='width: 80%' class="dark__burger__img" alt="dark burger">
+                                            <img src="./img/burgers/Chiken burger.png" style='width: 80%' class="dark__burger__img"
+                                                alt="dark burger">
                                         </div>
                                         <div class="burgers__struck">
                                             <a href="#" class="burger-icon-link" id='Logo_struck'>
@@ -392,8 +393,8 @@
                                 <div class="item__slider">
                                     <div class="burgers__slider-left-col">
                                         <div class="burgers__img">
-                                            <img src="./img/burgers/NYC-Diner-Bacon-Cheeseburger.png" style='width: 80%' class="dark__burger__img"
-                                                alt="dark burger">
+                                            <img src="./img/burgers/NYC-Diner-Bacon-Cheeseburger.png" style='width: 80%'
+                                                class="dark__burger__img" alt="dark burger">
                                         </div>
                                         <div class="burgers__struck">
                                             <a href="#" class="burger-icon-link" id='Logo_struck'>
@@ -1083,11 +1084,11 @@
                             <div class="reviews__title">Юрий Дудь</div>
                             <div class="reviews__text">
                                 <p>
-                                    Юра  будет дуть. Дуть будет Юра.
-                                    Юра  будет дуть. Дуть будет Юра.
-                                    Юра  будет дуть. Дуть будет Юра.
-                                    Юра  будет дуть. Дуть будет Юра.
-                                    Юра  будет дуть. Дуть будет Юра.
+                                    Юра будет дуть. Дуть будет Юра.
+                                    Юра будет дуть. Дуть будет Юра.
+                                    Юра будет дуть. Дуть будет Юра.
+                                    Юра будет дуть. Дуть будет Юра.
+                                    Юра будет дуть. Дуть будет Юра.
                                 </p>
                             </div>
                             <div class="reviews__btn">
@@ -1103,16 +1104,18 @@
                 <div class="container">
                     <div class="video__content">
                         <h1 class="title__video">Как мы работаем</h1>
-                        
+
                         <!-- <video class="video__play" src="https://youtu.be/DwWTQ6T13j4" type="video/mp4" controls></video> -->
-                        <iframe class="video__play" src="https://www.youtube.com/embed/DwWTQ6T13j4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="video__play" src="https://www.youtube.com/embed/DwWTQ6T13j4" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </section>
             <section class="section section_centered order">
                 <div class="container">
                     <h1 class="title__form">Закажите доставку</h1>
-                    <form action="" class="form" id="myForm" name="form" >
+                    <form action="" class="form" id="myForm" name="form">
                         <div class="form__left-col">
                             <div class="form__row">
                                 <label class="form__block">
@@ -1122,7 +1125,8 @@
                                 </label>
                                 <label class="form__block">
                                     <div class="form__block-title">Телефон</div>
-                                    <input type="tel" id="phone_number" name="phone_number" class="form__block-input" placeholder="89212264923" required>
+                                    <input type="tel" id="phone_number" name="phone_number" class="form__block-input"
+                                        placeholder="89212264923" required>
                                     <div class="error"></div>
                                 </label>
                             </div>
@@ -1156,7 +1160,8 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__block-title">Комментарий</div>
-                                    <textarea type="text" id="comment" name="comment" class="form__block-textarea" required></textarea>
+                                    <textarea type="text" id="comment" name="comment" class="form__block-textarea"
+                                        required></textarea>
                                     <div class="error"></div>
                                 </label>
                             </div>
@@ -1197,7 +1202,7 @@
                         <div class="footer__left-col">
                             <div class="footer__contacts">
                                 <address class="footer__adress">
-                                    Санкт-Петербург, ул.Бабушкниа, д.12/1, 15
+                                    Санкт-Петербург, ул.Бабушкина, д.12/1, 15
                                 </address>
                                 <div class="footer__tel">
                                     <svg class="phone-icon">
@@ -1247,15 +1252,15 @@
     </div>
     <nav class="fixed-menu">
         <ul class="fixed-menu__list">
-            <li class="fixed-menu__item fixed-menu__item_active"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item fixed-menu__item_active" data-scroll-to="0"></li>
+            <li class="fixed-menu__item" data-scroll-to="1"></li>
+            <li class="fixed-menu__item" data-scroll-to="2"></li>
+            <li class="fixed-menu__item" data-scroll-to="3"></li>
+            <li class="fixed-menu__item" data-scroll-to="4"></li>
+            <li class="fixed-menu__item" data-scroll-to="5"></li> 
+            <li class="fixed-menu__item" data-scroll-to="6"></li>
+            <li class="fixed-menu__item" data-scroll-to="7"></li>
+            <li class="fixed-menu__item" data-scroll-to="8"></li>
         </ul>
     </nav>
     <div class="hamburger-menu">
@@ -1296,7 +1301,7 @@
                     <div class="popup__title"></div>
                     <div class="popup__text">
                         <p>
-                            
+
                         </p>
                     </div>
                 </div>
@@ -1315,13 +1320,17 @@
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=d6613793-dc52-4243-b9ad-f323852fe51b&lang=ru_RU" type="text/javascript">
     </script>
-    <script src='./acco_team.js'></script>
-    <script src='./acco_menu.js'></script>
-    <script src='./hamburger.js'></script>
-    <script src='./burgers-stuck.js'></script>
-    <script src='./burgers-slider.js'></script>
-    <script src='./overlay.js'></script>
-    <script src='./formData.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
+    <script src='./js/scripts/main.js'></script>
+    <script src='./js/scripts/acco_team.js'></script>
+    <script src='./js/scripts/acco_menu.js'></script>
+    <script src='./js/scripts/hamburger.js'></script>
+    <script src='./js/scripts/burgers-stuck.js'></script>
+    <script src='./js/scripts/burgers-slider.js'></script>
+    <script src='./js/scripts/overlay.js'></script>
+    <script src='./js/scripts/formData.js'></script>
     <script type="text/javascript">
         let myMap;
         ymaps.ready(function () {

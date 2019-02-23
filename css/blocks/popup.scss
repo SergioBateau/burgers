@@ -43,19 +43,19 @@
 }
 .popup__content {
     width: rem(475px);
-    height: rem(255px);
+    // height: rem(255px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: rem(20px) rem(20px);
     @include tablets () {
         width: rem(400px);
-        height: rem(280px);
+        // height: rem(280px);
     }
     @include phones () {
         padding: rem(10px) rem(10px);
         width: rem(300px);
-        height: rem(280px);
+        // height: rem(280px);
     }
 }
 .popup-form__content {
@@ -68,6 +68,7 @@
     font-family: 'Gagalin';
     font-size: rem(14px);
     color: #2f3234;
+    margin-bottom: rem(10px);
 }
 
 .popup__text,

@@ -55,12 +55,16 @@ p {
 
 .wrapper {
     width: 100%;
-    // min-width: rem(940px);
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
+}
+.maincontent {
+    height: 100%;
+    transition: transform 1s;
+    will-change: transform;
 }
 .container {
     max-width: rem(940px);
