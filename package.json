@@ -1,0 +1,29 @@
+{
+  "name": "Burgers",
+  "version": "1.0.0",
+  "description": "<h1>Burgers</h1>\r <p>Author: Sergey Korablev</p>",
+  "main": "acco_menu.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioBateau/burgers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergioBateau/burgers/issues"
+  },
+  "homepage": "https://github.com/SergioBateau/burgers#readme"
+}

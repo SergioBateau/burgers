@@ -1,40 +1,37 @@
-var items = document.querySelectorAll('.menu__accordeon-item');
-// нашли все.menu__accordeon-item
+let verticalAcco = () => {
+    let calculateWidth = () => {
+        let windowWidth = window.innerWidth;
+        let links = document.querySelectorAll(".menu-accordeon__trigger");
+        let link = document.querySelector(".menu-accordeon__trigger");
+        let linksWidth = parseFloat(getComputedStyle(link).width);
+        let reqWidth = windowWidth - linksWidth * links.length;
+        return reqWidth > 550 ? 550 : reqWidth;
+    }
 
-for (var item of items) {
-    //перебираем все .menu__accordeon-item
-    item.addEventListener('click', e => {
-        //навесим клик на каждый .menu__accordeon-item
 
-        var curItem = e.currentTarget;
-        // ссылается на элемент на которое предназначалось событие
+    let oMenulink = document.querySelectorAll('.menu-accordeon__trigger');
 
-        var content = curItem.querySelector('.menu__desc');
-       
+    oMenulink.forEach(function (personName) {
+        personName.addEventListener("click", function (e) {
+            e.preventDefault();
+            let activePerson = document.querySelector(".js-title__menu");
 
-        var textBlock = content.firstElementChild;
-        // находим первый блок .menu__text
+            if (activePerson) {
+                let teamAccordeonDetails = activePerson.querySelector(".menu__desc");
+                teamAccordeonDetails.style.width = "0px";
+                activePerson.classList.remove("js-title__menu");
+                
+            }
 
-        var reqWidth = textBlock.getBoundingClientRect().width;
-        
-        // открыть на исходную высоту
-        
-        
+             if (!activePerson || ((activePerson.querySelector(".title__accordeon-text") != e.target) && (activePerson.querySelector(".menu-accordeon__trigger") != e.target))) { 
+                let currentPerson = e.target.closest(".menu__accordeon-item");
+                currentPerson.classList.add("js-title__menu");
 
-        if (curItem.classList.contains('js-title__menu')) {
-            //пункт открыт
-            curItem.classList.remove('js-title__menu');
-            content.style.width = 0;
-        } else {
-            // пункт закрыт
-            Array.from(items).forEach(elem => {
-                elem.classList.remove('js-title__menu');
-                elem.querySelector('.menu__desc').style.width=0;
-            });
+                let currentPersonInfo = currentPerson.querySelector(".menu__desc");
+                currentPersonInfo.style.width = calculateWidth() + "px";
+            } 
             
-            curItem.classList.add('js-title__menu');
-            content.style.width = "400px";
-        }
-
-    });
+        })
+    })
 }
+verticalAcco();
