@@ -1104,11 +1104,34 @@
                 <div class="container">
                     <div class="video__content">
                         <h1 class="title__video">Как мы работаем</h1>
+                        <div class="player hidden">
+                            <div class="player__wrapper">
+                                <div id="yt-player"></div>
+                                <div class="player__splash"></div>
+                                <svg class="play-icon">
+                                        <use xlink:href="./img/sprite.svg#play"></use>
+                                    </svg>
+                            </div>
+                            <div class="player__controls">
+                                <button class="player__start"></button>
+                                <div class="player__playback">
+                                    <button class="player__playback-button"></button>
+                                </div>
+                                <div class="sound__volume">
+                                        <svg class="volume-icon" id="mic">
+                                            <use xlink:href="./img/sprite.svg#volume"></use>
+                                        </svg>
+                                        <input type="range" class="volume__length" step="1" id="micLevel" min="0" max="10">
+                                <div class="player__duration">
+                                    <span class="player__duration-completed">0:00</span> :
+                                    <span class="player__duration-estimate">0:00</span>
+                                </div>
+                                
 
-                        <!-- <video class="video__play" src="https://youtu.be/DwWTQ6T13j4" type="video/mp4" controls></video> -->
-                        <iframe class="video__play" src="https://www.youtube.com/embed/DwWTQ6T13j4" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -1257,7 +1280,7 @@
             <li class="fixed-menu__item" data-scroll-to="2"></li>
             <li class="fixed-menu__item" data-scroll-to="3"></li>
             <li class="fixed-menu__item" data-scroll-to="4"></li>
-            <li class="fixed-menu__item" data-scroll-to="5"></li> 
+            <li class="fixed-menu__item" data-scroll-to="5"></li>
             <li class="fixed-menu__item" data-scroll-to="6"></li>
             <li class="fixed-menu__item" data-scroll-to="7"></li>
             <li class="fixed-menu__item" data-scroll-to="8"></li>
@@ -1323,6 +1346,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
+    <script src='https://www.youtube.com/iframe_api'></script>
     <script src='./js/scripts/main.js'></script>
     <script src='./js/scripts/acco_team.js'></script>
     <script src='./js/scripts/acco_menu.js'></script>
@@ -1331,6 +1355,7 @@
     <script src='./js/scripts/burgers-slider.js'></script>
     <script src='./js/scripts/overlay.js'></script>
     <script src='./js/scripts/formData.js'></script>
+    <script src='./js/scripts/player.js'></script>
     <script type="text/javascript">
         let myMap;
         ymaps.ready(function () {

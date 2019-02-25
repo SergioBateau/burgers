@@ -8,22 +8,23 @@ for (burgerStruck of burgerStrucks) {
         e.preventDefault();
         let curBurgerIcon = e.currentTarget;
         // console.log(curBurgerIcon);
-        
+
         let burgerStuck1 = curBurgerIcon.parentNode;
         // console.log(burgerStuck1);
+
+        const burgerMenuStuck = burgerStuck1.getElementsByTagName('div')[1];
         
-        let burgerMenuStuck = burgerStuck1.getElementsByTagName('div')[1];
-        // console.log(burgerMenuStuck);
         if (burgerMenuStuck.style.display = 'none') {
         burgerMenuStuck.style.display = 'block';
-        } else {
-            burgerMenuStuck.style.display = 'none';
         }
+
+
+
         burgerStuckCloseIcon.addEventListener('click', function (e) {
             e.preventDefault();
             burgerMenuStuck.style.display = 'none';
-    })
+        })
 
-    
+
     })
 }

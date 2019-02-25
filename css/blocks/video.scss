@@ -10,15 +10,166 @@
     align-items: center;
     text-align: center;
 }
-.video__play {
-    width: rem(660px);
-    height: rem(405px);
-    @include tablets () {
-        width: rem(720px);
-        height: rem(450px);
+
+.player {
+    position: relative;
+    display: inline-block;
+    
+  
+    &.hidden {
+      opacity: 0;
+      transition: opacity .3s;
     }
-    @include phones () {
-        width: rem(460px);
-        height: rem(285px);
+  }
+  #yt-player {
+      @include tablets {
+          width: 720px;
+          height: 450px;
+      }
+      @include phones {
+        width: 460px;
+        height: 282px;
     }
+  }
+  .player__splash {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./../../img/video/poster.jpg') center center / cover no-repeat;
+    cursor: pointer;
+  }
+  
+  .player__wrapper {
+    &.active .player__splash {
+      display: none;
+    }
+    &.active .play-icon {
+      display: none;
+    }
+  }
+  
+  .player__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: #3e3e3e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .player__start {
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-left-color: #626262;
+    padding: 0;
+    border-right-width: 0;
+    background: transparent;
+    outline: none;
+    margin-left: rem(10px);
+    position: relative;
+    &.paused {
+      width: 11px;
+      height: 22px;
+      border: none;
+    
+      &:after,
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 4px;
+        top: 0;
+        bottom: 0;
+        background: #626262;
+      }
+      &:after {
+        right: 0;
+      }
+      &:before {
+        left: 0;
+      }
+    }
+  }
+  
+  .player__playback {
+    height: 4px;
+    width: 400px;
+    background: #626262;
+    position: relative;
+    @include phones {
+        width: 260px;
+    }
+  }
+  
+  .player__playback-button {
+    background: #626262;
+    border-radius: 50px;
+    border: none;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    position: absolute;
+    top: -4px;
+    transform: translateX(-50%);
+    left: 0;
+  }
+  
+  .player__duration {
+    color: #626262;
+    font-weight: bold;
+    margin-left: rem(20px);
+  }
+.sound__volume {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
 }
+.volume__length {
+    border-radius: 1px;
+    background-color: #626262;
+    appearance: none;
+    outline: none;
+    width: 60px;
+    height: 4px;
+    
+}
+.volume__length::-webkit-slider-thumb {
+    appearance: none;
+    background: #626262;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.play-icon {
+    position: absolute;
+    fill: #f2f3e9;
+    width: 60%;
+    height: 60%;
+    opacity: .9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    
+}
+.volume-icon {
+    width: 40px;
+    height: 60px;
+    fill: #626262;
+    // &.unmuted {
+    //     width: 4px;
+    //     height: 26px;
+    //     background: #626262;
+    //     transform: rotate(45deg);  
+    //   }
+}
+

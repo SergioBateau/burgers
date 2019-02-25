@@ -42,6 +42,12 @@
         width: rem(435px);
     }
     @include phones () {
+        width: rem(400px);
+    }
+    @include phones2 () {
+        width: rem(350px);
+    }
+    @include phones3 () {
         width: rem(300px);
     }
 }
@@ -69,6 +75,12 @@
         text-align: center;
     }
     @include phones () {
+        width: rem(400px);
+    }
+    @include phones2 () {
+        width: rem(350px);
+    }
+    @include phones3 () {
         width: rem(300px);
     }
 }

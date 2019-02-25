@@ -21,5 +21,15 @@
         @content;
     }
 }
+@mixin phones2 () {
+    @media screen and (max-width: $phones2) {
+        @content;
+    }
+}
+@mixin phones3 () {
+    @media screen and (max-width: $phones3) {
+        @content;
+    }
+}
 
 
