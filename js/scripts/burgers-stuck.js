@@ -14,10 +14,10 @@ for (burgerStruck of burgerStrucks) {
 
         const burgerMenuStuck = burgerStuck1.getElementsByTagName('div')[1];
         
-        if (burgerMenuStuck.style.display = 'none') {
-        burgerMenuStuck.style.display = 'block';
-        }
-
+        // if (burgerMenuStuck.style.display = 'none') {
+        // burgerMenuStuck.style.display = 'block';
+        // }
+        burgerMenuStuck.classList.toggle('open');
 
 
         burgerStuckCloseIcon.addEventListener('click', function (e) {
