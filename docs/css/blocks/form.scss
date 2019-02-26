@@ -1,0 +1,156 @@
+.form {
+    display: flex;
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form__left-col,
+.form__right-col {
+    width: 50%;
+    margin: 0 rem(10px);
+    @include tablets() {
+        width: 100%;
+        padding: 0 10%;
+    }
+    @include phones() {
+        padding: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(15px);
+    @include phones() {
+        justify-content: center;
+    }
+}
+
+.form__block {
+    margin-right: rem(20px);
+    flex: 1;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.form__block-input {
+    border-radius: rem(5px);
+    background: #fff;
+    border: none;
+    width: 100%;
+    padding: rem(10px) rem(10px);
+    color: #2f3234;
+    font-family: 'Ubuntu-light';
+    font-size: rem(14px);
+    &:focus {
+    outline: 2px solid #f9b43b;
+    box-shadow: 0 0 0 1pt #f9b43b;
+    }
+}
+
+.form__block-title {
+    font-family: 'Ubuntu-light';
+    font-size: rem(14px);
+    color: $white;
+    margin-bottom: rem(5px);
+
+}
+
+.form__block-textarea {
+    font-family: 'Ubuntu-light';
+    font-size: rem(14px);
+    height: rem(110px);
+    border: none;
+    border-radius: rem(5px);
+    resize: none;
+    width: 100%;
+    padding: rem(10px);
+    &:focus {
+        outline: 2px solid #f9b43b;
+        box-shadow: 0 0 0 1pt #f9b43b;
+        }
+    }
+    
+
+
+.form__block-checkbox {
+    display: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.form__block1 {
+    &:hover {
+        cursor: pointer;
+    }
+}
+.form__block-checkbox-mark {
+    height: rem(15px);
+    width: rem(15px);
+    border: none;
+    display: inline-block;
+    position: relative;
+    background-color: #FFF;
+    border-radius: rem(2px);
+    padding: rem(3px);
+}
+
+[type=checkbox]:checked+.form__block-checkbox-mark:before {
+    content: '\2713';
+    position: absolute;
+    top: rem(-10px);
+    left: 0;
+    font-size: rem(23px);
+    color: red;
+}
+
+// радио
+input[type="radio"] {
+    display: none;
+}
+
+.form__payment-radio {
+    padding-left: rem(22px);
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.form__payment-radio:before {
+    background: #fff;
+	border-radius: 50%;
+	width: rem(16px);
+	height: rem(16px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+}
+.form__payment-radio:after {
+    background-color: red;
+	border-radius: 50%;
+	width: rem(6px);
+	height: rem(6px);
+	top: rem(5px);
+	left: rem(5px);
+	content: '';
+	position: absolute;
+	opacity: 0;
+}
+input[type="radio"]:checked + .form__payment-radio:after {
+    opacity: 1;
+}
+
+.form__payment-radio {
+    margin-right: rem(20px);
+    display: flex;
+
+}
+.error {
+    color: red;
+}
