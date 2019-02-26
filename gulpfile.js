@@ -26,36 +26,38 @@ const {DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS} = require('./gulp.config');
 sass.compiler = require("node-sass");
 
 task("clean", () => {
-    return src(`${DIST_PATH}/**/*`, {
+    return src('./dist/**/*', {
             read: false
         })
         .pipe(rm())
 });
 
 task("copy:html", () => {
-    return src(`${SRC_PATH}/*.html`)
-        .pipe(dest(DIST_PATH))
+    return src('./src/*.html')
+        .pipe(dest('dist'))
         .pipe(reload({
             stream: true
         }))
 
 });
 
+// task("copy:fonts", () => {
+//     return src('./src/fonts/**').pipe(dest('./dist/fonts')).pipe(reload({
+//         stream: true
+//     }));
+// });
 task("copy:img", () => {
-    return src('src/img/**').pipe(dest('dist/img')).pipe(reload({
-        stream: true
-    }));
-});
-task("copy:fonts", () => {
-    return src('src/fonts/*').pipe(dest('dist/fonts')).pipe(reload({
+    return src('./src/img/**').pipe(dest('./dist/img')).pipe(reload({
         stream: true
     }));
 });
 
+
 task("styles", () => {
     return src([
         ...STYLES_LIBS,
-        "src/css/main.scss" 
+        "./src/css/main.scss", 
+        "./src/css/layout/fonts.scss" 
     ])
         .pipe(gulpif(env==='dev', sourcemaps.init()))
         .pipe(concat("main.min.scss"))
@@ -72,7 +74,7 @@ task("styles", () => {
             compatibility: 'ie8'
         })))
         .pipe(gulpif(env==='dev', sourcemaps.write()))
-        .pipe(dest(DIST_PATH))
+        .pipe(dest('dist'))
         .pipe(reload({
             stream: true
         }))
@@ -82,7 +84,7 @@ task("styles", () => {
 task("scripts", () => {
     return src([
         ...JS_LIBS,
-        "src/js/**.js"
+        "./src/js/**.js"
     ])
         .pipe(gulpif(env==='dev', sourcemaps.init()))
         .pipe(concat("main.min.js", {
@@ -93,7 +95,7 @@ task("scripts", () => {
         }))
         .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env==='dev', sourcemaps.write()))
-        .pipe(dest(DIST_PATH))
+        .pipe(dest('dist'))
         .pipe(reload({
             stream: true
         }))
@@ -111,18 +113,18 @@ task("watch", () => {
     watch("./src/css/**/**.scss", series("styles"));
     watch("./src/*.html", series("copy:html"));
     watch("./src/js/**.js", series("scripts"));
-    watch("./src/img/**", series("copy:img"));
+    // watch("./src/img/**", series("copy:img"));
 });
 
 task("default", 
 series(
     "clean", 
-parallel("copy:html", "styles", "copy:img", "copy:fonts", "scripts"),
+parallel("copy:html", "styles", "copy:img", "scripts"),
 parallel("watch", "server")
 ));
 
 task("build", 
 series(
     "clean", 
-parallel("copy:html", "styles", "copy:img", "copy:fonts", "scripts")
+parallel("copy:html", "styles", "copy:img", "scripts")
 ));
