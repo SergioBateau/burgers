@@ -1,4 +1,4 @@
-const hamburgerIcon = document.querySelector('.hamburger-menu-link');
+;const hamburgerIcon = document.querySelector('.hamburger-menu-link');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const hamburgerMenuItems = document.querySelectorAll('#nav__item');
 const hamburgerCloseIcon = document.querySelector('.close');
@@ -11,19 +11,19 @@ hamburgerIcon.addEventListener('click', function (event) {
     hamburgerMenu.style.display = 'flex';
     hamburgerIcon.style.display = 'none';
     document.body.style.overflow = 'hidden';
-})
+});
 hamburgerCloseIcon.addEventListener('click', function (event) {
     event.preventDefault();
     hamburgerMenu.style.display = '';
     hamburgerIcon.style.display = '';
     document.body.style.overflow = '';
-})
+});
 hamburgerLogo.addEventListener('click', function (event) {
     event.preventDefault();
     hamburgerMenu.style.display = '';
     hamburgerIcon.style.display = '';
     document.body.style.overflow = '';
-})
+});
 
 for (var hamburgerMenuItem of hamburgerMenuItems) {
 
@@ -41,4 +41,4 @@ for (var hamburgerMenuItem of hamburgerMenuItems) {
         
         window.location.hash = hrefHamburgerMenuItem;
     })
-}
+};

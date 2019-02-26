@@ -1,4 +1,4 @@
-const burgerStrucks = document.querySelectorAll('.burgers__struck');
+;const burgerStrucks = document.querySelectorAll('.burgers__struck');
 const burgerStuckCloseIcon = document.querySelector('.close_struck');
 
 for (burgerStruck of burgerStrucks) {
@@ -27,4 +27,4 @@ for (burgerStruck of burgerStrucks) {
 
 
     })
-}
+};

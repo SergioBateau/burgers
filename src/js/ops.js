@@ -1,12 +1,14 @@
-const sections = $('.section');
+;const sections = $('.section');
 const display = $('.maincontent');
+console.log(display);
+
 const switchActiveClassInSideMenu = menuItemIndex => {
     $('.fixed-menu__item')
     .eq(menuItemIndex)
     .addClass('fixed-menu__item_active')
     .siblings()
     .removeClass('fixed-menu__item_active');
-}
+};
 let inscroll = false;
 
 const md = new MobileDetect(window.navigator.userAgent);
@@ -22,7 +24,7 @@ const performTransition = sectionEq => {
     if (!!sectionEqNum === false) {
         console.error("не верное значение для аргумента sectionEq");
         
-    }
+    };
 
     inscroll = true;
     const position = sectionEq * -100 + "%";
@@ -54,7 +56,7 @@ const scrollToSection = direction => {
     if (direction === 'prev' && prevSection.length) {
         performTransition(prevSection.index())
     }
-}
+};
 
 $('.wrapper').on('wheel', e => {
     const deltaY = e.originalEvent.deltaY;
@@ -97,5 +99,5 @@ if (isMobile) {
             scrollToSection(nextOrPrev);
         }
     })
-}
+};
 

@@ -1,4 +1,4 @@
-let verticalAcco = () => {
+;let verticalAcco = () => {
     let calculateWidth = () => {
         let windowWidth = window.innerWidth;
         let links = document.querySelectorAll(".menu-accordeon__trigger");
@@ -6,7 +6,7 @@ let verticalAcco = () => {
         let linksWidth = parseFloat(getComputedStyle(link).width);
         let reqWidth = windowWidth - linksWidth * links.length;
         return reqWidth > 550 ? 550 : reqWidth;
-    }
+    };
 
 
     let oMenulink = document.querySelectorAll('.menu-accordeon__trigger');
@@ -33,5 +33,5 @@ let verticalAcco = () => {
             
         })
     })
-}
+};
 verticalAcco();

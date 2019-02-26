@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('#modal');
+;const buttons = document.querySelectorAll('#modal');
 const closePopup = document.querySelector('.popup__close');
 const popup = document.querySelector('.popup');
 const overlay = document.querySelector('.overlay');
@@ -19,14 +19,14 @@ button.addEventListener('click', e=> {
     let title = reviewTitle.textContent;
     popupTitle.innerHTML = title;
     
-})
+});
 closePopup.addEventListener('click', e=> {
     e.preventDefault();
     popup.classList.remove('opened');
-})
+});
 overlay.addEventListener("click", e=> {
     if(e.target ===overlay) {
         closePopup.click();
     }
-})
-}
+});
+};

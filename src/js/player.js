@@ -1,6 +1,6 @@
 
-let player;
-let soundControl =document.getElementById('micLevel');
+;let player;
+
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player("yt-player", {
@@ -44,7 +44,7 @@ function onPlayerReady(event) {
         updateTimerDisplay();
     }, 1000);
 
-}
+};
 
 function onPlayerStateChange(event) {
     const playerButton = $(".player__start");
@@ -58,10 +58,10 @@ function onPlayerStateChange(event) {
             break;
     }
     
-}
+};
 
 $(".player__start").on("click", e => {
-    const playerStatus = player.getPlayerState(); // 0 - ended, 1 - played, 2 - paused ...
+    const playerStatus = player.getPlayerState(); 
 
     if (playerStatus !== 1) {
         player.playVideo();
@@ -70,7 +70,7 @@ $(".player__start").on("click", e => {
     }
 });
 $(".play-icon").on("click", e => {
-    const playerStatus = player.getPlayerState(); // 0 - ended, 1 - played, 2 - paused ...
+    const playerStatus = player.getPlayerState();
 
     if (playerStatus !== 1) {
         player.playVideo();
@@ -97,12 +97,12 @@ function changeButtonPosition(percents) {
     $(".player__playback-button").css({
         left: `${percents}%`
     });
-}
+};
 
 function updateTimerDisplay() {
     $(".player__duration-completed").text(formatTime(player.getCurrentTime()));
     $(".player__duration-estimate").text(formatTime(player.getDuration()));
-}
+};
 
 function formatTime(time) {
     const roundTime = Math.round(time);
@@ -113,18 +113,18 @@ function formatTime(time) {
     const formatedSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
     return minutes + ":" + formatedSeconds;
-}
+};
 $(".volume-icon").on("click", e => {
     const muteStatus = player.isMuted()
-    // const volumeButton = $(".volume-icon");
+    
     if(muteStatus) {
         player.unMute();
-        // volumeButton.removeClass("unmuted");
+        
     } else {
         player.mute();
-        // volumeButton.addClass("unmuted");
+        
     }
-})
+});
 $("#micLevel").on('click', e => {
     e.preventDefault;
     const volumeBar = $(e.currentTarget);
@@ -133,5 +133,5 @@ $("#micLevel").on('click', e => {
     
     player.setVolume(newVolumePosition);
 
-})
+});
 

@@ -1,6 +1,6 @@
-const myForm = document.querySelector('#myForm');
+;const myForm = document.querySelector('#myForm');
 const sendButton = document.querySelector('#send');
-const modalText = document.querySelector('.popup-form__text')
+const modalText = document.querySelector('.popup-form__text');
 const popupForm = document.querySelector('.popup-form');
 const closePopupForm = document.querySelector('.popup-form__close');
 const overlayForm = document.querySelector('.overlay-form');
@@ -52,7 +52,7 @@ sendButton.addEventListener('click', function (event) {
 
         })
     }
-})
+});
 
 
 function validateForm(form) {
@@ -68,7 +68,7 @@ function validateForm(form) {
         valid = false;
     }
     return valid;
-}
+};
 
 function validateField(field) {
 
@@ -80,48 +80,4 @@ function validateField(field) {
         return true;
     }
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const myForm = document.querySelector('#myForm');
-// const send = document.querySelector('#send');
-
-// send.addEventListener('click', e => {
-//     e.preventDefault();
-
-//     if (validateForm(myForm)) {
-//         const data = {
-//             name: myForm.elements.name.value,
-//             phone_number: myForm.elements.phone_number.value,
-//             comment: myForm.elements.comment.value,
-
-//         };
-//         let url = "https://webdev-api.loftschool.com/sendmail/";
-//         const xhr = new XMLHttpRequest();
-//         xhr.responseType = "json";
-//         xhr.open("POST", url);
-//         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-//         xhr.send(JSON.stringify(data));
-//         xhr.addEventListener('load', () => {
-//             if(xhr.response.status) {
-//                 console.log('Все ок');
-
-//             }
-//         });
-//     }
-// });
+};

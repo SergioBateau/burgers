@@ -1,7 +1,7 @@
 
 
 
-let teamAccoJS = () => {
+;let teamAccoJS = () => {
     let oTeamlink = document.querySelectorAll('.team__desc-name');
     
     oTeamlink.forEach(function(personName) {
@@ -24,5 +24,5 @@ let teamAccoJS = () => {
             }
         })
     }) 
-}
+};
 teamAccoJS();
