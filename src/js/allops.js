@@ -1,6 +1,6 @@
 ;const sections = $('.section');
 const display = $('.maincontent');
-console.log(display);
+
 
 const switchActiveClassInSideMenu = menuItemIndex => {
     $('.fixed-menu__item')
@@ -99,5 +99,5 @@ if (isMobile) {
             scrollToSection(nextOrPrev);
         }
     })
-};
+}
 

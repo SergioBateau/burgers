@@ -23,6 +23,7 @@
     display: flex;
     height: 100%;
     cursor: pointer;
+    
 }
 
 .menu-accordeon__trigger {
@@ -36,7 +37,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     padding: 3% 2%;
-   
 
     @include phones {
         min-width: rem(40px);
@@ -73,12 +73,14 @@
     overflow: hidden;
     background: rgba(#2f3234, .93);
     height: 100%;
+    transition: width .3s;
     // float: left;
 
 }
 
 .js-title__menu {
     width: 70%;
+    transition: width 2s;
 
     @include tablets {
         width: 100%;
@@ -92,6 +94,7 @@
     }
     .menu__desc {
         width: 100%;
+        
     }
 }
 
