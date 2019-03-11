@@ -1,5 +1,5 @@
 .video {
-    background: url(./../img/background/video-background.jpg) center center / cover no-repeat;
+    background: url(./img/background/video-background.jpg) center center / cover no-repeat;
     display: flex;
     
 }
@@ -38,7 +38,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('./../img/video/poster.jpg') center center / cover no-repeat;
+    background: url('./img/video/poster.jpg') center center / cover no-repeat;
     cursor: pointer;
   }
   
@@ -173,11 +173,6 @@
     width: 40px;
     height: 60px;
     fill: #626262;
-    // &.unmuted {
-    //     width: 4px;
-    //     height: 26px;
-    //     background: #626262;
-    //     transform: rotate(45deg);  
-    //   }
+    
 }
 
