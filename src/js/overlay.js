@@ -10,7 +10,7 @@ button.addEventListener('click', e=> {
     e.preventDefault();
     popup.classList.add('opened');
 
-    curButton = e.currentTarget;
+    var curButton = e.currentTarget;
     let reviewButton = curButton.parentNode;
     let reviewText = reviewButton.previousElementSibling;
     let review = reviewText.textContent;
