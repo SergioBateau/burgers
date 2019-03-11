@@ -23,25 +23,10 @@ $phones3: 360px;
 
 
 
-@import "./layout/fonts.css";
+@import "./layout/fonts.scss";
 @import "./layout/media.scss";
 @import "./layout/base.scss";
 
-@import "./blocks/best.scss";
-@import "./blocks/btn.scss";
-@import "./blocks/burgers.scss";
-@import "./blocks/fixed-menu.scss";
-@import "./blocks/footer.scss";
-@import "./blocks/form.scss";
-@import "./blocks/hamburger-menu-link.scss";
-@import "./blocks/header.scss";
-@import "./blocks/hero.scss";
-@import "./blocks/menu.scss";
-@import "./blocks/order.scss";
-@import "./blocks/popup.scss";
-@import "./blocks/reviews.scss";
-@import "./blocks/svg-icon.scss";
-@import "./blocks/team.scss";
-@import "./blocks/title.scss";
-@import "./blocks/video.scss";
+@import "./blocks/*.scss";
+
 

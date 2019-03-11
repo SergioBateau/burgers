@@ -5,11 +5,11 @@ const {
     series,
     watch,
     parallel
-} = require("gulp");
-const rm = require("gulp-rm");
-const sass = require("gulp-sass");
-const concat = require("gulp-concat");
-const browserSync = require("browser-sync").create();
+} = require('gulp');
+const rm = require('gulp-rm');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
@@ -19,112 +19,131 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+// const svgo = require('gulp-svgo');
+// const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
+const MobileDetect = require('mobile-detect');
+
+
 const env = process.env.NODE_ENV;
 
-const {DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS} = require('./gulp.config');
-sass.compiler = require("node-sass");
+sass.compiler = require('node-sass');
 
-task("clean", () => {
-    return src('./dist/**/*', {
-            read: false
-        })
-        .pipe(rm())
+task('clean', () => {
+    return src('dist/**/*', {
+        read: false
+    }).pipe(rm())
 });
 
-task("copy:html", () => {
-    return src('./src/*.html')
-        .pipe(dest('dist'))
-        .pipe(reload({
-            stream: true
-        }))
+task('copy:html', () => {
+    return src('src/*.html').pipe(dest('dist')).pipe(reload({
+        stream: true
+    }))
 
 });
 
-// task("copy:fonts", () => {
-//     return src('./src/fonts/**').pipe(dest('./dist/fonts')).pipe(reload({
-//         stream: true
-//     }));
-// });
-task("copy:img", () => {
-    return src('./src/img/**').pipe(dest('./dist/img')).pipe(reload({
+task('copy:img', () => {
+    return src('src/img/**/*').pipe(dest('dist/img')).pipe(reload({
         stream: true
     }));
 });
 
+task('copy:fonts', () => {
+    return src('src/fonts/*').pipe(dest('dist/fonts')).pipe(reload({
+        stream: true
+    }));
+});
 
-task("styles", () => {
-    return src([
-        ...STYLES_LIBS,
-        "./src/css/main.scss", 
-        "./src/css/layout/fonts.scss" 
-    ])
-        .pipe(gulpif(env==='dev', sourcemaps.init()))
+const styles = [
+    'node_modules/normalize.css/normalize.css',
+    'src/css/main.scss'
+];
+
+task('styles', () => {
+    return src(styles)
+        .pipe(gulpif(env === "dev", sourcemaps.init()))
         .pipe(concat("main.min.scss"))
         .pipe(sassGlob())
-        .pipe(sass().on("error", sass.logError))
-        .pipe(gulpif(env==='dev',
-        autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        })))
-        .pipe(gulpif(env==='prod', gcmq()))
-
-        .pipe(gulpif(env==='prod', cleanCSS({
-            compatibility: 'ie8'
-        })))
-        .pipe(gulpif(env==='dev', sourcemaps.write()))
+        .pipe(sass().on('error', sass.logError))
+        // .pipe(px2rem())
+        .pipe(gulpif(env === "dev",
+            autoprefixer({
+                browsers: ['last 2 versions'],
+                cascade: false
+            })))
+        .pipe(gulpif(env === "prod", gcmq()))
+        .pipe(gulpif(env === "prod", cleanCSS()))
+        .pipe(gulpif(env === "dev", sourcemaps.write()))
         .pipe(dest('dist'))
         .pipe(reload({
             stream: true
-        }))
+        }));
+
 });
 
+const libs = [
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/mobile-detect/mobile-detect.js",
+    "node_modules/jquery-touchswipe/jquery.touchSwipe.js",
+    'src/js/*.js'
+]
 
-task("scripts", () => {
-    return src([
-        ...JS_LIBS,
-        "./src/js/**.js"
-    ])
-        .pipe(gulpif(env==='dev', sourcemaps.init()))
+task('scripts', () => {
+    return src(libs)
+        .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(concat("main.min.js", {
-            newLine: ";"
+            newLine: ';'
         }))
         .pipe(babel({
-            presets: ["@babel/env"]
+            presets: ['@babel/env']
         }))
         .pipe(gulpif(env === 'prod', uglify()))
-        .pipe(gulpif(env==='dev', sourcemaps.write()))
+        .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(dest('dist'))
         .pipe(reload({
             stream: true
-        }))
-});
+        }));
+})
 
-task("server", () => {
+// task('icons', () => {
+//     return src('src/images/icons/*.svg')
+//         .pipe(svgo({
+//             plugins: [{
+//                 removeAttrs: {
+//                     attrs: "(fill|stroke|style|width|height|data.*)"
+//                 }
+//             }]
+//         }))
+//         .pipe(svgSprite({
+//             mode: {
+//                 symbol: {
+//                     sprite: "../sprite.svg"
+//                 }
+//             }
+//         }))
+//         .pipe(dest('dist/images/icons'))
+// })
+
+task('server', () => {
     browserSync.init({
         server: {
             baseDir: "./dist"
         },
-        open: false
-    });
+        open: true
+    })
 });
 task("watch", () => {
-    watch("./src/css/**/**.scss", series("styles"));
-    watch("./src/*.html", series("copy:html"));
-    watch("./src/js/**.js", series("scripts"));
-    // watch("./src/img/**", series("copy:img"));
-});
+    watch('./src/css/**/*.scss', series('styles'));
+    watch('./src/*.html', series('copy:html'));
+    watch('./src/js/*.js', series('scripts'));
+    // watch('./src/img/*.svg', series('icons'));
+})
 
-task("default", 
-series(
-    "clean", 
-parallel("copy:html", "styles", "copy:img", "scripts"),
-parallel("watch", "server")
-));
+task('default',
+    series("clean",
+        parallel("copy:html", "styles", 'copy:img','copy:fonts', "scripts"),
+        parallel("watch", "server")));
 
-task("build", 
-series(
-    "clean", 
-parallel("copy:html", "styles", "copy:img", "scripts")
-));
+task('build',
+    series("clean",
+        parallel("copy:html", "styles", 'copy:img','copy:fonts',"scripts")));
