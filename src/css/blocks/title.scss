@@ -1,0 +1,91 @@
+.title__menu {
+    color: $white;
+    position: absolute;
+    top: 7%;
+    left: 8%;
+}
+
+.title__team {
+
+    @include tablets() {
+        text-align: center;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    @include phones() {
+        margin-bottom: rem(30px);
+        font-size: rem(50px);
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+
+.title__hero {
+    @include tablets() {
+        margin-bottom: rem(10px);
+    }
+    @include phones() {
+        margin-bottom: 0;
+        font-size: rem(60px);
+        line-height: 1.1;
+        margin-top: 20px;
+    }
+
+}
+
+.title__form {
+    text-align: center;
+
+    @include tablets() {
+        text-align: center;
+    }
+
+    @include phones() {
+        margin-bottom: 0;
+        font-size: rem(50px);
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+
+.title__best {
+    color: black;
+
+    @include phones() {
+        margin-bottom: rem(40px);
+        font-size: rem(50px);
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+
+.title__burgers {
+    color: $white;
+    line-height: 1.1;
+    margin-bottom: rem(60px);
+    font-size: rem(65px);
+    @include comp () {
+        font-size: rem(50px);
+    }
+
+    @include phones() {
+        font-size: rem(30px);
+        margin-bottom: rem(20px);
+    }
+}
+.title__video {
+    color: black;
+    font-size: rem(60px);
+    margin-top: rem(90px);
+    margin-bottom: rem(20px);
+    @include tablets () {
+        font-size: rem(72px);
+        margin-top: rem(215px);
+    }
+    @include phones () {
+        font-size: rem(50px);
+        margin-top: rem(160px);
+    }
+
+}
